@@ -20,7 +20,7 @@ body {
 /* Half slider: https://startbootstrap.com/snippets/half-slider/ */
 .carousel-item {
   height: 65vh;
-  min-height: 350px;
+  min-height: 50%; /* 350px; */
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
