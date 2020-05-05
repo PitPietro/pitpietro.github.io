@@ -15,7 +15,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
-    <body>
+    <body class="body-color">
     <h1>Design Patterns</h1>
     <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
       <div class="container">
@@ -29,7 +29,8 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="../pro-index.html">Programming</a></li>
+              <a class="nav-link" href="../pro-index.html">Programming</a>
+            </li>
             <li class="nav-item active dropdown">
               <a class="nav-link dropdown-toggle" href="#creational-patterns" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Creational Patterns
@@ -78,9 +79,18 @@
       </div>
     </nav>
 
-    <div class="container margin-100">
+    <div class="container margin-120">
       <div class="page-header">
         <h1 class="text-center">Design Patterns</h1>
+      </div>
+      <div class="container-fluid">
+        <p class="text-justify">
+          Design Patterns are reusable solutions to commonly occuring problems. In 1994 was published the Gang of Four book (GoF) where were collected the 23 patterns (subdivided into 3 categories) which are considered the foundation for all the other patterns.
+        </p>
+        <p>
+          They are <i>half cooked</i>, which means that they aren’t really a <i>code</i> solution, but you will achieve it by using the logic behind the design pattern.
+        </p>
+        <!-- TODO List all the patterns: https://pietropoluzzi.wordpress.com/programming/design-patterns/ -->
       </div>
     </div>
     <div include-html="../../reusable-elements/footer.html"></div>
