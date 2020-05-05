@@ -7,6 +7,7 @@
         <!-- responsive meta tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Design Patterns</title>
+        <link rel="shortcut icon" type="image/png" href="../../../img/icon/pit_64.png" />
         <link href="../../../css/style.css" rel="stylesheet" />
         <script type="text/javascript" src="../../../js/include-html.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -19,97 +20,64 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
       <div class="container">
         <a class="navbar-brand" href="../../../index.html">
-          <img src="http://placehold.it/150x50?text=Logo" alt="">
+          <img src="../../../img/icon/pit_200-100.png" height="80%" width="80%" alt="Pit Logo">
         </a>
+        <a class="nav-link text-white" href="#">Design Patterns</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="../pro-index.html">Programming</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Design Patterns
-                <span class="sr-only">(current)</span>
+              <a class="nav-link" href="../pro-index.html">Programming</a></li>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#creational-patterns" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Creational Patterns
               </a>
+              <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#builder">Builder</a>
+                <a class="dropdown-item" href="#factory-method">Factory Method</a>
+                <a class="dropdown-item" href="#prototype">Prototype</a>
+                <a class="dropdown-item" href="#singleton">Singleton</a>
+                <!-- <div class="dropdown-divider"></div> -->
+              </div>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Creational Patterns</a>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#structural-patterns" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Structural Patterns
+              </a>
+              <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#adapter">Adapter</a>
+                <a class="dropdown-item" href="#bridge">Bridge</a>
+                <a class="dropdown-item" href="#composite">Composite</a>
+                <a class="dropdown-item" href="#decoration">Decoration</a>
+                <a class="dropdown-item" href="#facade">Facade</a>
+                <a class="dropdown-item" href="#flyweight">Flyweight</a>
+                <a class="dropdown-item" href="#proxy">Proxy</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Builder</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Factory Method</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Prototype</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Singleton</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Structural Patterns</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Adapter</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bridge</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Composite</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Decoration</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Facade</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Flyweight</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Proxy</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Behavioral Patterns</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Chain of Responsibility</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Commands</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Interpreter</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Iterator</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Mediator</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Observer</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">State</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Strategy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Template Method</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Visitor</a>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#behavioral-patterns" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Behavioral Patterns
+              </a>
+              <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#chain-of-resp">Chain of Responsibility</a>
+                <a class="dropdown-item" href="#commands">Commands</a>
+                <a class="dropdown-item" href="#interpreter">Interpreter</a>
+                <a class="dropdown-item" href="#iterator">Iterator</a>
+                <a class="dropdown-item" href="#mediator">Mediator</a>
+                <a class="dropdown-item" href="#observer">Observer</a>
+                <a class="dropdown-item" href="#state">State</a>
+                <a class="dropdown-item" href="#strategy">Strategy</a>
+                <a class="dropdown-item" href="#template-method">Template Method</a>
+                <a class="dropdown-item" href="#visitor">Visitor</a>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
     <div class="container margin-100">
       <div class="page-header">
         <h1 class="text-center">Design Patterns</h1>
