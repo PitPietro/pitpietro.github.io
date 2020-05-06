@@ -17,45 +17,75 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
     <body class="body-color">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
+            <a class="navbar-brand" href="../../../index.html">
+                <img src="../../../img/icon/pit_200-100.png" height="80%" width="80%" alt="Pit Logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i>Back on top</i></a>
+                </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#problem">Problem</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#solution">Solution</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
+                  <a class="nav-link active dropdown-toggle" href="#structure" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Structure
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#uml">UML</a></li>
                     <li class="dropdown-submenu">
-                      <a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                      <a class="dropdown-item dropdown-toggle" href="#java">Java</a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Submenu action</a></li>
-                        <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+                        <li><a class="dropdown-item" href="#java-thread-safe">Thread Safe</a></li>
                         <li class="dropdown-submenu">
-                          <a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                          <a class="dropdown-item dropdown-toggle" href="#java-non-thread-safe">Non-Thread Safe</a>
                           <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-                            <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-                          </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                          <a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-                            <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                            <li><a class="dropdown-item" href="#java-single-thread">Single Thread</a></li>
+                            <li><a class="dropdown-item" href="#java-multi-thread">Multi-Thread</a></li>
                           </ul>
                         </li>
                       </ul>
                     </li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#kotlin">Kotlin</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#kotlin-thread-safe">Thread Safe</a></li>
+                          <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#kotlin-non-thread-safe">Non-Thread Safe</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#kotlin-single-thread">Single Thread</a></li>
+                              <li><a class="dropdown-item" href="#kotlin-multi-thread">Multi-Thread</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#c-sharp">C#</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#c-sharp-thread-safe">Thread Safe</a></li>
+                          <li><a class="dropdown-item" href="#c-sharp-non-thread-safe">Non-Thread Safe</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#php">PHP</a></li>
+                    <li><a class="dropdown-item" href="#python">Python</a></li>
                   </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#real-world">Real world implementation</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#pros-cons">Pros & Cons</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#conclusion">Conclusion</a>
                 </li>
               </ul>
             </div>
@@ -73,6 +103,17 @@
         <div include-html="../../reusable-elements/footer.html"></div>
         <script>
         includeHTML();
+        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+            }
+            var $subMenu = $(this).next('.dropdown-menu');
+            $subMenu.toggleClass('show');
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                $('.dropdown-submenu .show').removeClass('show');
+            });
+            return false;
+        });
         </script>
     </body>
 </html>
