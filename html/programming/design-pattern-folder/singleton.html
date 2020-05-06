@@ -17,84 +17,62 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
     <body class="body-color">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="../../../index.html">
-        <img src="../../../img/icon/pit_200-100.png" height="80%" width="80%" alt="Pit Logo">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i>Back on top</i></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#problem">Problem</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#solution">Solution</a>
-          </li>
-          <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" href="#structure" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Structure
-            </a>
-            <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#uml">UML</a>
-              <a class="dropdown-item" href="#java">Java</a>
-              <a class="dropdown-item" href="#factory-method">Factory Method</a>
-              <a class="dropdown-item" href="#prototype">Prototype</a>
-              <a class="dropdown-item" href="#singleton">Singleton</a>
-              <!-- <div class="dropdown-divider"></div> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                        <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+                        <li class="dropdown-submenu">
+                          <a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                            <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                            <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-          </li>
-          <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" href="#structural-patterns" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Structural Patterns
-            </a>
-            <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#adapter">Adapter</a>
-              <a class="dropdown-item" href="#bridge">Bridge</a>
-              <a class="dropdown-item" href="#composite">Composite</a>
-              <a class="dropdown-item" href="#decoration">Decoration</a>
-              <a class="dropdown-item" href="#facade">Facade</a>
-              <a class="dropdown-item" href="#flyweight">Flyweight</a>
-              <a class="dropdown-item" href="#proxy">Proxy</a>
-            </div>
-          </li>
-          <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" href="#behavioral-patterns" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Behavioral Patterns
-            </a>
-            <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#chain-of-resp">Chain of Responsibility</a>
-              <a class="dropdown-item" href="#commands">Commands</a>
-              <a class="dropdown-item" href="#interpreter">Interpreter</a>
-              <a class="dropdown-item" href="#iterator">Iterator</a>
-              <a class="dropdown-item" href="#mediator">Mediator</a>
-              <a class="dropdown-item" href="#observer">Observer</a>
-              <a class="dropdown-item" href="#state">State</a>
-              <a class="dropdown-item" href="#strategy">Strategy</a>
-              <a class="dropdown-item" href="#template-method">Template Method</a>
-              <a class="dropdown-item" href="#visitor">Visitor</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+          </nav>
 
-    <!-- START of the body content-->
-    <div class="container margin-120">
-      <div class="page-header">
-        <h1 class="text-center">Singleton Pattern</h1>
-      </div>
-      <div class="container-fluid">
-        <p></p>
-      </div>
-    </div>
-    <div include-html="../../reusable-elements/footer.html"></div>
-    <script>
-      includeHTML();
-    </script>
+        <!-- START of the body content-->
+        <div class="container margin-120">
+        <div class="page-header">
+            <h1 class="text-center">Singleton Pattern</h1>
+        </div>
+        <div class="container-fluid">
+            <p></p>
+        </div>
+        </div>
+        <div include-html="../../reusable-elements/footer.html"></div>
+        <script>
+        includeHTML();
+        </script>
     </body>
 </html>
