@@ -93,12 +93,33 @@
 
         <!-- START of the body content-->
         <div class="container margin-120">
-        <div class="page-header">
-            <h1 class="text-center">Singleton Pattern</h1>
-        </div>
-        <div class="container-fluid">
-            <p class="text-justify">Singleton is a <a href="dp-index.html#creational-patterns">Creational Pattern</a>. It ensures that a class has only one instance and provides a global access point to the instance. </p>
-        </div>
+          <div class="page-header">
+              <h1 class="text-center">Singleton Pattern</h1>
+          </div>
+          <div class="container-fluid">
+              <p class="text-justify">Singleton is a <a href="dp-index.html#creational-patterns">Creational Pattern</a>. It ensures that a class has only one instance and provides a global access point to the instance. </p>
+              <h2 id="problem">Problem</h2>
+              <p>
+                This pattern violates the <i>Sin­gle Respon­si­bil­i­ty Prin­ci­ple</i> but solves two problems at the same time:
+                <ol>
+                  <li><b>Ensure that a class has just a single instance</b></li>
+                  <li><b>Provide a global access point to that instance</b></li>
+                </ol>
+              </p>
+              <p>
+                Assume your program creates an object and after a while it creates a new one of the same type. Instead of receiving a new object, you get the one already created.
+                <br><b>P.N.</b> The constructor must be <i>private</i> or <i>protected</i> because the default constructor always return a new object.The Singleton lets you access an object from any point in the program and it also protects that instance from being overwritten by other part of the code.
+              </p>
+              <h2 id="solution">Solution</h2>
+              <p>There are mainly two steps to care about. The first is to make the constructor  <i>private</i> or <i>protected</i> (as I wrote above). The second is to provide the Singleton class whit a <i>public static</i> method that acts like a constructor. This method, as you’ll see in the code below, must be <i>thread safe</i>. It calls the constructor and saves a class instance in a static variable, then returns the same instance when the program tries to create a new once.</p>
+              <h2>Structure</h2>
+              <h4 id="uml">UML</h4>
+              <div class="c">
+                <img src="../../../img/dp/singleton.png" height="50%" width="50%" alt="singleton-uml">
+              </div>
+              <h4 id="java">Java</h4>
+              <h5 id="thread-safe">Thread Safe</h5>
+          </div>
         </div>
         <div include-html="../../reusable-elements/footer.html"></div>
         <script>
