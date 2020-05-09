@@ -74,8 +74,8 @@ body {
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
+  background-image: url('../img/svg/search-outline.svg');
+  /* background-position: 10px 12px; */
   background-repeat: no-repeat;
   width: 100%;
   font-size: 16px;
