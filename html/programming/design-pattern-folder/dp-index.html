@@ -75,10 +75,6 @@
               <a class="dropdown-item" href="#visitor">Visitor</a>
             </div>
           </li>
-          <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_list -->
-          <li class="nav-item">
-            <input type="text" id="myInput" class="form-control mr-sm-2"  onkeyup="searchFunction()" placeholder="Search for something..." title="Type in a name">
-          </li>
         </ul>
       </div>
     </nav>
@@ -94,20 +90,9 @@
         </p>
         <p>
           They are <i>half cooked</i>, which means that they aren’t really a <i>code</i> solution, but you will achieve it by using the logic behind the design pattern.
-        </p>
-        <ul id="myUL">
-          <li><a href="#">Adele</a></li>
-          <li><a href="#">Agnes</a></li>
-        
-          <li><a href="#">Billy</a></li>
-          <li><a href="#">Bob</a></li>
-        
-          <li><a href="#">Calvin</a></li>
-          <li><a href="#">Christina</a></li>
-          <li><a href="#">Cindy</a></li>
-        </ul>        
+        </p> 
         <!-- TODO List all the patterns: https://pietropoluzzi.wordpress.com/programming/design-patterns/ -->
-        <h2 id="creational-patterns">Creational Patterns</h2>
+        <h2 id="title-creational-patterns">Creational Patterns</h2>
         <h4 id="abstract-factory">Abstract Factory</h4>
         <p></p>
         <h4>Builder</h4>
@@ -159,22 +144,6 @@
     <div include-html="../../reusable-elements/footer.html"></div>
     <script>
       includeHTML();
-      function searchFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
     </script>
     </body>
 </html>
