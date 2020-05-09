@@ -14,6 +14,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="../../js/dropdown-menu.js"></script>
+        <link rel="stylesheet" href="../../css/bs-stepper.min.css">
     </head>
     <body class="body-color">
     <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
@@ -54,82 +56,47 @@
             Vocabulary is is fundamental to understand everything without creating any misunderstanding. Let’s start whit the names of the sciences involved in cryptography:
         </p>
 
-        <!-- Vertical Steppers -->
-        <div class="row mt-1">
-            <div class="col-md-12">
-                <!-- Stepers Wrapper -->
-                <ul class="stepper stepper-vertical">
-                    <!-- First Step -->
-                    <li class="completed">
-                        <a href="#!">
-                            <span class="circle">1</span>
-                            <span class="label">First step</span>
-                        </a>
-                    </li>
-  
-                    <!-- Second Step -->
-                    <li class="active">
-                        <!--Section Title -->
-                        <a href="#!">
-                            <span class="circle">2</span>
-                            <span class="label">Second step</span>
-                        </a>
-  
-                        <!-- Section Description -->
-                        <div class="step-content grey lighten-3">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse cupiditate voluptate facere
-                            iusto
-                            quaerat
-                            vitae excepturi, accusantium ut aliquam repellat atque nesciunt nostrum similique. Inventore
-                            nostrum
-                            ut,
-                            nobis porro sapiente.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore error excepturi veniam nemo
-                            repellendus, distinctio soluta vitae at sit saepe. Optio eaque quia excepturi adipisci pariatur
-                            totam,
-                            atque odit fugiat.</p>
-                            <p>Deserunt voluptatem illum quae nisi soluta eum perferendis nesciunt asperiores tempore saepe
-                            reiciendis,
-                            vero quod a dolor corporis natus qui magni quas fuga rem excepturi laboriosam. Quisquam
-                            expedita ab
-                            fugiat.</p>
-                        </div>
-                    </li>
-  
-                    <!-- Third Step -->
-                    <li class="warning">
-                    <a href="#!">
-                        <span class="circle"><i class="fas fa-exclamation"></i></span>
-                        <span class="label">Third step</span>
-                    </a>
-                    </li>
-  
-                    <!-- Fourth Step -->
-                    <li>
-                    <a href="#!">
-                        <span class="circle">4</span>
-                        <span class="label">Fourth step</span>
-                    </a>
-                    </li>
-  
-                </ul>
-                <!-- /.Stepers Wrapper -->
-  
+        <!-- Stepper using https://github.com/Johann-S/bs-stepper/ -->
+        <div class="bs-stepper vertical">
+            <div class="bs-stepper-header" role="tablist">
+              <!-- your steps here -->
+              <div class="step" data-target="#logins-part">
+                <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
+                  <span class="bs-stepper-circle">1</span>
+                  <span class="bs-stepper-label">ASCII</span>
+                </button>
+                <div class="text-justify">
+                    American Standard Code for Information Interchange, a standard that turns alphabetic (and others) characters into numbers.
+                    <!-- TODO Add ASCII table image -->
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#information-part">
+                <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                  <span class="bs-stepper-circle">2</span>
+                  <span class="bs-stepper-label">Asymmetric key cryptography</span>
+                </button>
+                <div class="text-justify">
+                    A kind of encryption where the key required to encrypt is different from the once required to decrypt. Those two keys are mathematically interconnected.
+                    </div>
+              </div>
+              
             </div>
-        </div>
-  
-        <!-- Steppers Navigation -->
-        <div class="row mt-1">
-            <div class="col-md-12 text-right">
-            <button class="btn btn-flat btn-sm">Cancel</button>
-            <button class="btn btn-primary btn-sm">Next</button>
+            <div class="bs-stepper-content" >
+              <!-- your steps content here -->
+              <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger"></div>
+              <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger"></div>
             </div>
-        </div>
-        <!-- /.Vertical Steppers -->
+          </div>
+
+          
     </div>
     <div include-html="../reusable-elements/footer.html"></div>
     <script>
       includeHTML();
+      $(document).ready(function () {
+  var stepper = new Stepper($('.bs-stepper')[0])
+})
     </script>
     </body>
 </html>
