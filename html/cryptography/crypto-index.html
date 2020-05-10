@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="description" content="Personal website" />
-        <meta name="author" content="Pietro Poluzzi" />
-        <!-- responsive meta tag -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Cryptography</title>
-        <link rel="shortcut icon" type="image/png" href="../../img/icon/pit_64.png" />
-        <link href="../../css/style.css" rel="stylesheet" />
-        <script type="text/javascript" src="../../js/include-html.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="../../js/dropdown-menu.js"></script>
-        <link rel="stylesheet" href="../../css/bs-stepper.min.css">
-    </head>
-    <body class="body-color">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal website" />
+    <meta name="author" content="Pietro Poluzzi" />
+    <!-- responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cryptography</title>
+    <link rel="shortcut icon" type="image/png" href="../../img/icon/pit_64.png" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../js/include-html.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="../../js/dropdown-menu.js"></script>
+    <link rel="stylesheet" href="../../css/bs-stepper.min.css">
+</head>
+
+<body class="body-color">
     <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="../../index.html">
-        <img src="../../img/icon/pit_200-100.png" height="80%" width="80%" alt="Pit Logo">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i>Back on top</i></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../../index.html">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#vocabulary">Vocabulary</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">other option</a>
-          </li>
-        </ul>
-      </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../img/icon/pit_200-100.png" height="80%" width="80%" alt="Pit Logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i>Back on top</i></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#vocabulary">Vocabulary</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">other option</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <!-- START of the body content-->
@@ -48,55 +50,64 @@
         <div class="page-header">
             <h1 class="text-center">Cryptography</h1>
         </div>
-        <p class="text-justify">
-            hello
-        </p>
+        <p class="text-justify"></p>
         <h2 class="text-center" id="vocabulary">Vocabulary</h2>
         <p class="text-justify">
             Vocabulary is is fundamental to understand everything without creating any misunderstanding. Let’s start whit the names of the sciences involved in cryptography:
         </p>
-
-        <!-- Stepper using https://github.com/Johann-S/bs-stepper/ -->
-        <div class="bs-stepper vertical">
-            <div class="bs-stepper-header" role="tablist">
-              <!-- your steps here -->
-              <div class="step" data-target="#logins-part">
-                <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
-                  <span class="bs-stepper-circle">1</span>
-                  <span class="bs-stepper-label">ASCII</span>
-                </button>
-                <div class="text-justify">
-                    American Standard Code for Information Interchange, a standard that turns alphabetic (and others) characters into numbers.
-                    <!-- TODO Add ASCII table image -->
+        <!-- collapse group https://www.bootstrapdash.com/bootstrap-4-tutorial/collapse/ -->
+        <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="card">
+                <div class="card-header bg-info" role="tab" id="headingOne">
+                    <h5 class="mb-0">
+                        <a class="text-white" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              ASCII
+            </a>
+                    </h5>
                 </div>
-              </div>
-              <div class="line"></div>
-              <div class="step" data-target="#information-part">
-                <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
-                  <span class="bs-stepper-circle">2</span>
-                  <span class="bs-stepper-label">Asymmetric key cryptography</span>
-                </button>
-                <div class="text-justify">
-                    A kind of encryption where the key required to encrypt is different from the once required to decrypt. Those two keys are mathematically interconnected.
+                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="card-body">
+                        American Standard Code for Information Interchange, a standard that turns alphabetic (and others) characters into numbers.
                     </div>
-              </div>
-              
+                </div>
             </div>
-            <div class="bs-stepper-content" >
-              <!-- your steps content here -->
-              <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger"></div>
-              <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger"></div>
+            <div class="card">
+                <div class="card-header" role="tab" id="headingTwo">
+                    <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Asymmetric key cryptography
+            </a>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="card-body">
+                        A kind of encryption where the key required to encrypt is different from the once required to decrypt. Those two keys are mathematically interconnected.
+                    </div>
+                </div>
             </div>
-          </div>
-
-          
+            <div class="card">
+                <div class="card-header" role="tab" id="headingThree">
+                    <h5 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Cipher
+            </a>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="card-body">
+                        A general system that hides the meaning of a message by replacing the letters of the original text (known as plaintext) with other letters.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div include-html="../reusable-elements/footer.html"></div>
     <script>
-      includeHTML();
-      $(document).ready(function () {
-  var stepper = new Stepper($('.bs-stepper')[0])
-})
+        includeHTML();
+        $(document).ready(function() {
+            var stepper = new Stepper($('.bs-stepper')[0])
+        })
     </script>
-    </body>
+</body>
+
 </html>
