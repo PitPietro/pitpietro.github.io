@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
   /* font-family: 'Oswald', sans-serif !important; */
 }
@@ -13,9 +12,12 @@ body {
 }
 
 /* Half slider: https://startbootstrap.com/snippets/half-slider/ */
+
 .carousel-item {
-  height: 50%; /*65vh;*/
-  min-height: 50%; /* 350px; */
+  height: 50%;
+  /*65vh;*/
+  min-height: 50%;
+  /* 350px; */
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -23,7 +25,7 @@ body {
   background-size: cover;
 }
 
-.footer-gb{
+.footer-gb {
   margin-top: 5%;
   background-color: #0062E6;
 }
@@ -37,7 +39,7 @@ body {
 }
 
 .margin-120 {
-  margin-top:120px;
+  margin-top: 120px;
 }
 
 .body-color {
@@ -45,6 +47,7 @@ body {
 }
 
 /* https://stackoverflow.com/questions/44467377/bootstrap-4-multilevel-dropdown-inside-navigation */
+
 .dropdown-submenu {
   position: relative;
 }
