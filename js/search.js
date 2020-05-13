@@ -1,13 +1,13 @@
 function searchAndHighlight(searchTerm, selector) {
     if (searchTerm) {
-        var selector = selector || "#realTimeContents"; //use body as selector if none provided
+        var selector = selector || "#body-id"; //use body as selector if none provided
         var searchTermRegEx = new RegExp(searchTerm, "ig");
         var matches = $(selector).text().match(searchTermRegEx);
         if (matches != null && matches.length > 0) {
             $('.highlighted').removeClass('highlighted'); //Remove old search highlights
 
             //Remove the previous matches
-            $span = $('#realTimeContents span');
+            $span = $('#body-id span');
             $span.replaceWith($span.html());
 
             if (searchTerm === "&") {
@@ -55,11 +55,12 @@ function searchAndHighlight(searchTerm, selector) {
     return false;
 }
 
-$(document).on('click', '.searchButtonClickText_h', function (event) {
+$(document).on('click', '.searchButton', function (event) {
+    $result = $('.searchInput').val();
 
     $(".highlighted").removeClass("highlighted").removeClass("match");
-    if (!searchAndHighlight($('.textSearchvalue_h').val())) {
-        alert("No results found");
+    if (!searchAndHighlight($result)) {
+        alert($result + " NOT found!");
     }
 
 
