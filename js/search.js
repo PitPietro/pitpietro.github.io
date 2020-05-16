@@ -64,6 +64,10 @@ $(document).on('click', '.searchButton', function (event) {
 
     $(".highlighted").removeClass("highlighted").removeClass("match");
     if (!searchAndHighlight($result)) {
+        $(document).trigger("add-alerts", {
+            message: "This is an error",
+            priority: "error"
+          });
         alert($result + " NOT found!");
     }
 
