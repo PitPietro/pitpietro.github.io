@@ -22,6 +22,40 @@
 
 */
 
+.my-carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #ffffffaa;
+  /*
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  */
+}
+
+.display-caption {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: black;
+}
+
+.author {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: black;
+}
+
 .item-1 {
+  background-image: url('../img/landscape/essaouira-morocco-14141.jpg');
+}
+
+.item-2 {
   background-image: url('../img/landscape/oviedo-dominican-republic-14582.jpg');
 }
