@@ -142,71 +142,44 @@
         </a>
       </div>
     -->
-    <!-- Page Wrap -->
-    <div class="page-wrap">
-
-      <div id="home-slider">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide-one">
-              <div class="swiper-image" data-swiper-parallax-y="-20%">
-                <div class="swiper-image-inner swiper-image-left swiper-image-one">
-                  <h1>A <span class="emphasis">Breath</span>. <br><span>Of Fresh Air.</span></h1>
-                  <p>Chapter I, page XV</p>
-                </div>
-              </div>
-              <div class="swiper-image" data-swiper-parallax-y="35%">
-                <div class="swiper-image-inner swiper-image-right swiper-image-two">
-                  <p class="paragraph">
-                    A Prophet sat in the market-place and told the fortunes of all who cared to engage his services.
-                    Suddenly there came running up one who told him that his house had been broken into by thieves, and
-                    that they had made off with everything they could lay
-                    hands on.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide swiper-slide-two">
-              <div class="swiper-image" data-swiper-parallax-y="-20%">
-                <div class="swiper-image-inner swiper-image-left swiper-image-three">
-                  <h1>The <span class="emphasis">Drop</span>. <br><span>Of Eternal life.</span></h1>
-                  <p>Chapter II, page VII</p>
-                </div>
-              </div>
-              <div class="swiper-image" data-swiper-parallax-y="35%">
-                <div class="swiper-image-inner swiper-image-right swiper-image-four">
-                  <p class="paragraph">
-                    A thirsty Crow found a Pitcher with some water in it, but so little was there that, try as she
-                    might, she could not reach it with her beak, and it seemed as though she would die of thirst within
-                    sight of the remedy.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide swiper-slide-three">
-              <div class="swiper-image" data-swiper-parallax-y="-20%">
-                <div class="swiper-image-inner swiper-image-left swiper-image-five">
-                  <h1>A <span class="emphasis">Sense</span>. <br><span>Of Things to Come.</span></h1>
-                  <p>Chapter III, page XI</p>
-                </div>
-              </div>
-              <div class="swiper-image" data-swiper-parallax-y="35%">
-                <div class="swiper-image-inner swiper-image-right swiper-image-six">
-                  <p class="paragraph">
-                    Every man carries Two Bags about with him, one in front and one behind, and both are packed full of
-                    faults. The Bag in front contains his neighbours’ faults, the one behind his own. Hence it is that
-                    men do not see their own faults, but never fail to see
-                    those of others.
-                  </p>
-                </div>
-              </div>
-            </div>
-
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active"
+          style="background-image: url('img/landscape/oviedo-dominican-republic-14582.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="display-4">First Slide</h3>
+            <p class="lead">This is a description for the first slide.</p>
           </div>
-          <div class="swiper-pagination"></div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="display-4">Second Slide</h3>
+            <p class="lead">This is a description for the second slide.</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/O7fzqFEfLlo/1920x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="display-4">Third Slide</h3>
+            <p class="lead">This is a description for the third slide.</p>
+          </div>
         </div>
       </div>
-
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </header>
   <br>
@@ -241,19 +214,7 @@
   <div include-html="html/reusable-elements/footer.html"></div>
   <script>
     includeHTML();
-    var mySwiper = new Swiper(".swiper-container", {
-      direction: "vertical",
-      loop: true,
-      pagination: ".swiper-pagination",
-      grabCursor: true,
-      speed: 1000,
-      paginationClickable: true,
-      parallax: true,
-      autoplay: false,
-      effect: "slide",
-      mousewheelControl: 1
-    });
-
+    $('.carousel-3d-controls').mdbCarousel3d();
   </script>
 </body>
 
