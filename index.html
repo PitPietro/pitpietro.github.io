@@ -12,6 +12,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="css/style.css" rel="stylesheet" />
         <script type="text/javascript" src="js/include-html.js"></script>
     </head>
@@ -69,6 +70,8 @@
 
     <!-- START of the body content-->
     <header>
+      <!-- old carousel -->
+      <!--
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -135,6 +138,26 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+    -->
+    <div class="container">
+      <div class="carousel-3d carousel-3d-controls">
+        <div class="carousel-3d-inner">
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).jpg" alt="Slide"></div>
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).jpg" alt="Slide"></div>
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg" alt="Slide"></div>
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(48).jpg" alt="Slide"></div>
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(49).jpg" alt="Slide"></div>
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(50).jpg" alt="Slide"></div>
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(51).jpg" alt="Slide"></div>
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(52).jpg" alt="Slide"></div>
+          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(53).jpg" alt="Slide"></div>
+        </div>
+        <div class="carousel-3d-controls">
+          <a class="prev-btn waves-effect waves-light"><i class="fas fa-chevron-left"></i></a>
+          <a class="next-btn waves-effect waves-light"><i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
     </header>
     <br>
     <div class="container-fluid">
@@ -167,6 +190,7 @@
     <div include-html="html/reusable-elements/footer.html"></div>
     <script>
       includeHTML();
+      $('.carousel-3d-controls').mdbCarousel3d();
     </script>
     </body>
 </html>
