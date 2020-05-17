@@ -11,20 +11,6 @@ html, body {
   flex-shrink: none;
 }
 
-/* Half slider: https://startbootstrap.com/snippets/half-slider/ */
-
-.carousel-item {
-  height: 50%;
-  /*65vh;*/
-  min-height: 50%;
-  /* 350px; */
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .footer-gb {
   margin-top: 5%;
   background-color: #0062E6;
