@@ -1,11 +1,11 @@
 .carousel-item {
-    height: 65vh;
-    min-height: 350px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Half slider: https://startbootstrap.com/snippets/half-slider/ 
@@ -48,10 +48,17 @@
 }
 */
 
+.display-5 {
+  font-size: calc(1.375rem + 2.1vw);
+  /* text-align: justify; */
+  margin: 2%;
+}
+
 .author {
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: black;
+  font-size: calc(1.25rem + 0.3vw);
+  color: black;
+  margin-right: 5%;
+  text-align: right;
 }
 
 .item-1 {
