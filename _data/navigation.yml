@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "GitHub Repos"
+    url: /github-repos/
   - title: "Privacy & Security"
     url: /privacy-security/
   - title: "About"
