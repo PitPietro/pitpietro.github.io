@@ -9,7 +9,7 @@ Those projects have a dedicated page where I have wrote (or I will write) the re
 
 ## List of repositories
 - [morse-code](/github-repos/morse-code/)
-- [myfirstdj](#myfirstdj)
+- [myfirstdj](/github-repos/myfirstdj/)
 - [pascal-triangle](#pascal-triangle)
 - [pythonGUI](#pythongui)
 
