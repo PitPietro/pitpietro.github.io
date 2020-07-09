@@ -2,9 +2,6 @@
 main:
   - title: "GitHub Repos"
     url: /github-repos/
-    nodes:
-      - title: "Morse Code"
-      url: /morse-code/
   - title: "Privacy & Security"
     url: /privacy-security/
   - title: "About"
