@@ -10,7 +10,7 @@ The code is available at [github.com/PitPietro/myfirstdj](https://github.com/Pit
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/PitPietro/myfirstdj?include_prereleases)
 ![GitHub repo size](https://img.shields.io/github/repo-size/PitPietro/myfirstdj)
 ![GitHub](https://img.shields.io/github/license/PitPietro/myfirstdj)
-This is my first project on Django framework and I want to share the knowledge I will accumulate by studing it. I followed [Corey Schafer's Django tutorial playlist](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) and I really enjoyed it!
+<br>This is my first project on Django framework and I want to share the knowledge I will accumulate by studing it. I followed [Corey Schafer's Django tutorial playlist](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) and I really enjoyed it!
 
 ## Table of contents
 - [Introduction](#introduction)
