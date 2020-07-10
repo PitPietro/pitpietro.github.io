@@ -4,10 +4,12 @@ permalink: /github-repos/python-games/
 title: "Python Games Project"
 ---
 
-The code is available at [github.com/PitPietro/pythonGUI](https://github.com/PitPietro/python-games)
+The code is available at [github.com/PitPietro/python-games](https://github.com/PitPietro/python-games)
 
 ## Introduction
 
-<br>This repo is aimed to test all the major Python libraries that build Graphic User Interface.
+<br>This repo is aimed to build games in all the possible ways.
 
 ## Table of contents
+- [Introduction](#introduction)
+- [Table of contents](#table-of-contents)
