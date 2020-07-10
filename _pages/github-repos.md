@@ -8,7 +8,9 @@ title: "GitHub Repos"
 Those projects have a dedicated page where I have wrote (or I will write) the relative docs. 
 
 ## List of repositories
-- ### [morse-code](/github-repos/morse-code/)
-- ### [myfirstdj](/github-repos/myfirstdj/)
-- ### [pascal-triangle](/github-repos/pascal-triangle)
-- ### [pythonGUI](/github-repos/pythongui)
+
+### [morse-code](/github-repos/morse-code/)
+### [myfirstdj](/github-repos/myfirstdj/)
+### [pascal-triangle](/github-repos/pascal-triangle)
+### [pythonGUI](/github-repos/pythongui)
+### [python-games](/github-repos/python-games)
