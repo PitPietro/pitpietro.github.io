@@ -2,6 +2,9 @@
 layout: archive
 permalink: /github-repos/
 title: "GitHub Repos" 
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
 ---
 
 ## Introduction
