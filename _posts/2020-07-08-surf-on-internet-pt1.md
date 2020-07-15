@@ -11,13 +11,18 @@ toc_label: "Table of Contents"
 toc_icon: "cog"
 ---
 
-# I really don't know how it works
-Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum
+## The web browser
+Web browsers are basically HTML compiler, so you have to choose which compiler to use! Jokes apart, this choice can
+really influence the way you surf on the Internet. Here is a list of the major browsers whit their **pros & cons**!<br>
 
-## Submenu
+### Mozilla Firefox
+#### Pros & Cons
 
-### Subsubmenu
+### Google Chrome
+#### Pros & Cons
 
-## Hello
+## Microsoft Edge
+#### Pros & Cons
 
-## Who are you?
+### Opera
+#### Pros & Cons
