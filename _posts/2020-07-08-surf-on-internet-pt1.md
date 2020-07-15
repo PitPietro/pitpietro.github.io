@@ -21,7 +21,7 @@ really influence the way you surf on the Internet. Here is a list of the major b
 ### Google Chrome
 #### Pros & Cons
 
-## Microsoft Edge
+### Microsoft Edge
 #### Pros & Cons
 
 ### Opera
