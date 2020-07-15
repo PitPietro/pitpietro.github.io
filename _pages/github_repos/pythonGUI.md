@@ -2,6 +2,10 @@
 layout: single
 permalink: /github-repos/pythongui/
 title: "Python GUI Project"
+toc: true
+toc_sticky: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
 ---
 
 The code is available at [github.com/PitPietro/pythonGUI](https://github.com/PitPietro/pythonGUI)
@@ -11,25 +15,6 @@ The code is available at [github.com/PitPietro/pythonGUI](https://github.com/Pit
 ![GitHub repo size](https://img.shields.io/github/repo-size/PitPietro/pythonGUI)
 ![GitHub](https://img.shields.io/github/license/PitPietro/pythonGUI)
 <br>This repo is aimed to test all the major Python libraries that build Graphic User Interface.
-
-## Table of contents
-- [Introduction](#introduction)
-- [Table of contents](#table-of-contents)
-- [Discuss the project](#discuss-the-project)
-- [Prerequisites](#prerequisites)
-  - [Suggested virtual environment](#suggested-virtual-environment)
-  - [Suggested IDE](#suggested-ide)
-- [Libraries](#libraries)
-  - [PySimpleGUI](#pysimplegui)
-    - [Inside the event loop](#inside-the-event-loop)
-    - [Core elements](#core-elements)
-    - [Shortcut list](#shortcut-list)
-    - [Button shortcuts](#button-shortcuts)
-- [Contribute](#contribute)
-- [Versioning](#versioning)
-- [License](#license)
-- [Author](#author)
-
 <hr>
 
 ## Discuss the project

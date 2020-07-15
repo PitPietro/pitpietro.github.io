@@ -10,24 +10,7 @@ toc_icon: "cog"
 
 ## Introduction
 The Morse code translate all the 26 alphabet letters and numbers from 0 to 9 into _dots_ and _lines_, which are then received in the form of two different sounds: the dot's sound is shorter then the line once.
-
-## Table of Contents
-- [Introduction](#introduction)
-- [Table of Contents](#table-of-contents)
-- [The repository](#the-repository)
-- [Project working](#project-working)
-  - [CLI version](#cli-version)
-  - [GUI whit MVC](#gui-whit-mvc)
-- [Used library](#used-library)
-  - [ArrayList](#arraylist)
-  - [File](#file)
-  - [Pair](#pair)
-  - [URL](#url)
-- [Discussion about this project](#discussion-about-this-project)
-- [Prerequisites](#prerequisites)
-- [Installing](#installing)
-- [Versioning](#versioning)
-- [Author](#author)
+<hr>
 
 ## The repository
 The Java and Kotlin implementation of the project is available at [github.com/PitPietro/morse-code](https://github.com/PitPietro/morse-code).

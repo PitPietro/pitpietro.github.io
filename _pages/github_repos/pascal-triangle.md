@@ -2,6 +2,10 @@
 layout: single
 permalink: /github-repos/pascal-triangle/
 title: "Pascal Triangle"
+toc: true
+toc_sticky: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
 ---
 
 The code is available at [github.com/PitPietro/pascal-triangle](https://github.com/PitPietro/pascal-triangle)
@@ -11,21 +15,8 @@ The code is available at [github.com/PitPietro/pascal-triangle](https://github.c
 ![GitHub](https://img.shields.io/github/license/PitPietro/pascal-triangle)
 <br>It should have been a math library that solve the [Pascal's triangle](https://en.wikipedia.org/wiki/Pascal%27s_triangle) but, since this is my very first project in Python, it becomes a binder of
 all my code snippets. I'm planning to make the math library too!
+<hr>
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Table of Contents](#table-of-contents)
-- [Project working](#project-working)
-  - [Avoid errors](#avoid-errors)
-    - [Recursive functions](#recursive-functions)
-  - [Resolve problems](#resolve-problems)
-    - [Import problem](#import-problem)
-- [Used modules](#used-modules)
-  - [sys](#sys)
-- [Prerequisites](#prerequisites)
-- [Installing](#installing)
-- [Versioning](#versioning)
-- [Author](#author)
 ## Project working
 ### Avoid errors
 #### Recursive functions
