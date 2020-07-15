@@ -24,4 +24,5 @@ need to run `cd shell-games/`, then you can run `python3 tic-tac-toe.py` Be sure
 run by typing `chmod -x tic-tac-toe.py`.
 
 ## Arcade games
+<center>work in progress . . .</center><br>
 ![work in progress](https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif)
