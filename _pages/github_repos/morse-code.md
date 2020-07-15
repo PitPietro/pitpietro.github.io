@@ -1,19 +1,12 @@
 ---
 layout: single
 permalink: /github-repos/morse-code/
-title: "Morse code"
-
-date: 2020-07-15 # yyyy/mm/dd
-tags: [morse]
-# header:
-#    image: "/assets/images/posts/privacy_and_security/duck_transparent.gif"
-excerpt: "Communicate with . and -"
+title: "Morse code" 
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 ---
-
 
 ## Introduction
 The Morse code translate all the 26 alphabet letters and numbers from 0 to 9 into _dots_ and _lines_, which are then received in the form of two different sounds: the dot's sound is shorter then the line once.
