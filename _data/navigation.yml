@@ -2,6 +2,8 @@
 main:
   - title: "GitHub Repos"
     url: /github-repos/
+  - title: "Linux Tips & Tricksd"
+    url: /linux/
   - title: "Privacy & Security"
     url: /privacy-security/
   - title: "About"
