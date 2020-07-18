@@ -4,6 +4,13 @@ permalink: /privacy-security/
 title: "Privacy & Security posts by tags" 
 ---
 
+ 
+{% for post in site.categories.Privacy %}
+<li>
+  <span>{{ post.date | date_to_string }}</span> &nbsp;
+  <a href="{{ post.url }}">{{ post.title }}</a>
+</li>
+{% endfor %}
 
 <div id="archives">
 {% for category in site.categories %}
