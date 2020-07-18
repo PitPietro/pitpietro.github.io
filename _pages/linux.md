@@ -8,10 +8,10 @@ toc_label: "Table of Contents"
 toc_icon: "cog"
 ---
 
-# Terminal
+## Terminal
 {% for post in site.categories.Linux %}
 <li>
   <span>{{ post.date | date_to_string }}</span> &nbsp;
-  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 </li>
 {% endfor %}
