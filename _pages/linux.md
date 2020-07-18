@@ -11,7 +11,6 @@ toc_icon: "cog"
 ## Terminal
 {% for post in site.categories.Linux %}
 <li>
-  <h3><span>{{ post.date | date_to_string }}</span> &nbsp;
-  <a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <span>{{ post.date | date_to_string }}</span> &nbsp; <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 </li>
 {% endfor %}
