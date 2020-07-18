@@ -12,6 +12,6 @@ toc_icon: "cog"
 {% for post in site.categories.Linux %}
 <li>
   <span>{{ post.date | date_to_string }}</span> &nbsp;
-  <a href="{{ post.url }}">{{ post.title }}</a>
+  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 </li>
 {% endfor %}
