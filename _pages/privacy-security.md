@@ -4,17 +4,9 @@ permalink: /privacy-security/
 title: "Privacy & Security posts by tags" 
 ---
 
-<div id="archives">
+## Privacy
 {% for post in site.categories.Privacy %}
-  <div class="archive-group">
-    <h3 class="category-head">Privacy</h3>
-    <article class="archive-item">
-        <li>
-          <h4>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h4>
-        <li>
-    </article>
-  </div>
+  <span>{{ post.date | date_to_string }}</span> &nbsp;
+  <h3>  <a href="{{ post.url }}">{{ post.title }}</a>
+  </h3>
 {% endfor %}
-</div>
