@@ -9,7 +9,15 @@ toc_icon: "cog"
 ---
 
 ## Terminal
-{% for post in site.categories.Linux %}
+{% for post in site.categories.Terminal %}
+  <h3>
+    <span>{{ post.date | date_to_string }}</span> &nbsp;
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h3>
+{% endfor %}
+
+## Script
+{% for post in site.categories.Script %}
   <h3>
     <span>{{ post.date | date_to_string }}</span> &nbsp;
     <a href="{{ post.url }}">{{ post.title }}</a>

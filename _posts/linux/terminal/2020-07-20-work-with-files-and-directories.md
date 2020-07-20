@@ -1,7 +1,7 @@
 ---
 title: "Work with files and directories"
 date: 2020-07-20 # yyyy/mm/dd
-categories: Linux
+categories: Terminal
 tags: [terminal, linux]
 # header:
 #     image: "/assets/images/posts/privacy_and_security/duck_transparent.gif"
