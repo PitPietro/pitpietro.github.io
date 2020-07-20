@@ -23,6 +23,21 @@ The *change directory* command allow you to change the directory where the Termi
 ## Copy Files and Folders - cp
 `cp [file] [copied_file]`. If you have a file called *my_book.pdf* and you want to copy it in a new file called *my_second_book.pdf*, type `cp my_book.pdf my_second_book.pdf`.
 
+## Links - ln
+There are two different types of links you can create.
+
+### Hard Links
+Move your terminal to the Documents folder and create a file called *hello.txt*: `cd Documents && touch hello.txt`. Then type `nano hello.txt` to edit the file and copy-paste the content below.
+```
+Hello I am Pit and I am a Linux passionate!
+```
+
+Create an hard link: `ln hello.txt hello_link.txt`. You can now move *hello.txt* anywhere in the PC and the link will still work! Use `mv hello.txt ..` to move the file a folder back to the root and try to `nano hello_link.txt`. The changes to the are reflected to both the files. Moreover, if you delete *hello.txt*, *hello_link.txt* will still continue to exist (because it has been create with and hard link).
+
+### Symbolc Links
+It creates a reference in place of a "copy". To create a symbolic link, you need to **-s** flag. `cd Documents && echo "I am a dog" > dog.txt` to craete a file called *dog.txt*.<br>
+Create a symbolic link: `ln -s dog.txt symbolic_dog.txt`. The changes to the are reflected to both the files. Moreover, if you delete or change directory to *dog.txt*, *symbolic_dog.txt* will not be able to reference its content anymore: the symbolic link will break.
+
 ## List - ls
 `ls` lists all the files and folders placed in the current directory. You can add several flags and combine them to get a more complex output.<br>
 - `ls -R` lists files and folders recursively, like the `tree` command but a bit more confusing
