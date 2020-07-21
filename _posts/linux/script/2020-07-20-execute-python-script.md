@@ -11,14 +11,25 @@ toc_icon: "cog"
 ---
 
 ## Introduction
-There is only a way you can enable a Python script to execute. But there is also a second way, where you can use the Terminal to start a Python file from its main function.
+There is only a way you can enable a Python script to execute.
 
 ## Execute a py script
 
 ### Create the script
 Assimung you want to place your script inside a Documents' subfolder, let's jump into it and create the file. `cd /Documents/script_folder && touch hello.py`. Then type `nano hello.py` to edit the file and copy-paste the content below.
-```
-[the script]
+```                                                        
+#!/bin/usr/python3
+
+
+def say_hello():
+        name = input('What\'s you name? ')
+        if name != '':
+                print('Hello {}!'.format(name))
+        else:
+                print('Hello World!')
+
+say_hello()
+
 ```
 
 If you type the command `ls -l`, you will se that *hello.py* has read and write permissions for the owner and the owner's group, while only the read permission for anyone else.
@@ -57,5 +68,14 @@ python3 ./hello.py
 ```
 And get as output:
 ```
-[the output]
+What's your name?
+```
+Type your name or just a name, for example `Bob` and get the result:
+```
+Hello Bob!
+```
+
+Allowing an interaction with the end-user, the output will always change! Moreover, if you do not insert any name and simply press Enter when the program asks for your name, it will print:
+```
+Hello World!
 ```
