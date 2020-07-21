@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "CGI"
+    url: /cgi/
   - title: "GitHub Repos"
     url: /github-repos/
   - title: "Linux Tips & Tricks"
@@ -8,9 +10,3 @@ main:
     url: /privacy-security/
   - title: "About"
     url: /about/ # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
