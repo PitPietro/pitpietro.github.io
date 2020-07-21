@@ -35,7 +35,7 @@ Hello I am Pit and I am a Linux passionate!
 Create an hard link: `ln hello.txt hello_link.txt`. You can now move *hello.txt* anywhere in the PC and the link will still work! Use `mv hello.txt ..` to move the file a folder back to the root and try to `nano hello_link.txt`. The changes to the are reflected to both the files. Moreover, if you delete *hello.txt*, *hello_link.txt* will still continue to exist (because it has been create with and hard link).
 
 ### Symbolc Links
-It creates a reference in place of a "copy". To create a symbolic link, you need to **-s** flag. `cd Documents && echo "I am a dog" > dog.txt` to craete a file called *dog.txt*.<br>
+It creates a reference in place of a "copy". To create a symbolic link, you need to **-s** flag. `cd Documents && echo "I am a dog" > dog.txt` to create a file called *dog.txt*.<br>
 Create a symbolic link: `ln -s dog.txt symbolic_dog.txt`. The changes to the are reflected to both the files. Moreover, if you delete or change directory to *dog.txt*, *symbolic_dog.txt* will not be able to reference its content anymore: the symbolic link will break.
 
 ## List - ls
