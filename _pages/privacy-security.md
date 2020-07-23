@@ -1,8 +1,12 @@
 ---
-layout: archive
+layout: splash
 permalink: /privacy-security/
 title: "Privacy & Security posts by tags" 
 ---
+<br>
+
+# Linux Tips & Tricks
+<hr>
 
 ## Privacy
 {% for post in site.categories.Internet %}
