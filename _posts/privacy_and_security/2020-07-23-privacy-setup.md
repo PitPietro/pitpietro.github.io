@@ -12,7 +12,7 @@ toc_icon: "cog"
 
 ## Introduction
 In the 21st century, online security has become paramount! Most of us share on the internet a lot of information about themselves, like identity card number, date of birth, gender, phone number, home address and so on. Moreover, society like Google, Facebook and Amazon collect information on everything that concerns us, from purchasing behaviour to the time we spend on Instagram rather than on Facebook or LinkedIn: the so-called *big data*.<br><br>
-It’s very important to keep in mind that **security** is not equal to **<**. Security whitout privacy is like having an unbreakable house made of glass. Inside you are safe (by means anyone can hurt you), but everyone can spy on you from outside.
+It’s very important to keep in mind that **security** is not equal to **privacy**. Security whitout privacy is like having an unbreakable house made of glass. Inside you are safe (by means anyone can hurt you), but everyone can spy on you from outside.
 
 ## DuckDuckGo
 [DuckDuckGo](https://duckduckgo.com) is the safest search engine that has ever been developed and the best alternative to [Google](https://google.com) since it doesn’t collect or share any of our personal information and does not store our search history. They’ve nothing to sell to advertisers that can track us across the Internet: let’s take a look to its [privacy policy](https://duckduckgo.com/privacy)!
