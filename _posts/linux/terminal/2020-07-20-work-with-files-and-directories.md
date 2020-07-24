@@ -52,8 +52,8 @@ It allows to create a directory in the path where the terminal currently is. By 
 If you want to create a new folder in Documents, just type `cd Documents` and `mkdir [folder_name]` where *[folder_name]* is, of course, the name you have choosen for your new folder. You can type multiple terminal command by using the keyword *&&*. So, the commands became `cd Documents && mkdir [folder_name]`.
 
 ## Move and Rename - mv
-If you want to move a file in a different folder, type `mv [file_name] [subfolder]`. In place of *subfolder* you can use the folder's absolute path. You can even move a file in a folder that is a step back to the root directory: if you have a Documents' subfolder called "my_project" where is placed a file called "test1.txt" and you want to bring that file on Documents folder, you need to type `mv test1.txt ..`.<br>
-If you want to remane a file, you need to type `mv [file_name] [new_file_name]`. You can use the same command to rename a folder, too.
+If you want to move a file or a folder in a different folder, type `mv [file_or_folder_name] [subfolder]`. In place of *subfolder* you can use the folder's absolute path. You can even move a file (or a folder) in a folder that is a step back to the root directory: if you have a Documents' subfolder called "my_project" where is placed a file called "test1.txt" and you want to bring that file on Documents folder, you need to type `mv test1.txt ..`.<br>
+If you want to remane a file or folder, you need to type `mv [file_or_folder_name] [new_or_folder_file_name]`. You can use the same command to rename a folder, too.
 
 ## nano
 Use `nano [file_name]` to open the command-line text editor and edit the file. Some alternatives to *nano* are [cat](https://www.howtogeek.com/424234/how-to-use-the-linux-cat-and-tac-commands/), [less](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/) or [vim](https://www.howtogeek.com/102468/a-beginners-guide-to-editing-text-files-with-vi/) (also known as *vi*).
