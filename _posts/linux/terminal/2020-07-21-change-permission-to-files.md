@@ -38,7 +38,7 @@ For each set of permissions (the owner, the group, anyone else), you can assign 
 | 4      | read only               | r-- |
 | 5      | read and execute        | r-x |
 | 6      | read and write          | rw- |
-| 7      | read, write and execute | rwe |
+| 7      | read, write and execute | rwx |
 
 <br>You can 
 <br>Moreover, you can reed more about the chmod command at [linux main page](https://man7.org/linux/man-pages/man1/chmod.1.html).
