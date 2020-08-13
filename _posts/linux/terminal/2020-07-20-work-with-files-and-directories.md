@@ -61,6 +61,12 @@ Use `nano [file_name]` to open the command-line text editor and edit the file. S
 ## Present Working Directory - pwd
 The *present working directory* command tells you the absolute path of the directory you are currently in. So, if I you are in the Document directory, `pdw` will return `/home/$USER/Documents`.
 
+## Redirection > & >>
+Use the `>` and `>>` symbols to redirect the output of a command.<br>
+`echo [some content] > my_file.txt` or `echo [some content] >> my_file.txt`. In this examples, the **echo** command is redirect to the *my_file.txt* file.<br>
+`>` overrides the content of the file, while `>>` append it to the file. So, if you type `$ echo Hello > hello.txt` and then `$ cat hello.txt` you will get as output `Hello`. If you then type `$ echo World > hello.txt`, with `$ cat hello.txt` you will get `World`.<br>
+While, starting from `$ echo Hello > hello.txt`, you'll then type `$ echo World >> hello.txt`, with `$ cat hello.txt` you will get `Hello World` (with the second word in a new line).<br>
+
 ## touch
 Create a file by typing `touch [file_name]`. If you don't specify an extension, it will be considered a text file (.txt). You can visualize its content with **cat** and modify it with [nano](#nano).
 You can even add *some content* (literally) by typing `echo "some content" > [file_name]` (**>** acts as a redirector).
