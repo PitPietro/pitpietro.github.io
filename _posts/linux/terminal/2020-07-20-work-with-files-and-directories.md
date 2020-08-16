@@ -17,6 +17,10 @@ toc_icon: "cog"
 ## Introduction
 Getting in touch with the terminal is one of the most import things to learn when switching to a Linux distribution! The very first tips to keep in mind is the shortcut `Ctrl + Alt + T` which opens a new Terminal window.
 
+## cat
+This command take its name from the word *concatenation* because, among other functions, it can concatenate different files into a single one. But the simpliest task you can perform is showing the content of a file. Assuming you have a file called *my_file.txt* in the current working directory, let's type `cat my_file.txt`. You can also display the content of different files listing them all after the `cat` command, separated by a single space. As a matter of fact, it is already a *concatenation*, but it has no effect until you redirect the output to a new file. Say that you want to concatenate *chapter_one.txt* and *chapter_two.txt* files into *book.txt* file, you'll have to use the following command:<br>
+`cat chapter_one.txt chapter_two.txt > book.txt` you could now remove the chapters files with the [remove](#remove---rm) command.
+
 ## Change Directory - cd
 The *change directory* command allow you to change the directory where the Terminal is currenlty in. For example, if you want to get inside the Desktop directory, you need to type `cd Desktop`. Moreover, if you type `cd ..`, the terminal will change directory a step back to the root directory. So, if you type if from the Desktop directory, you'll jump back to */home/$USER* (if you didn't typed `sudo su`, you will only see *$USER/hostname:~$*). To return to the root folder */home/$USER* from anywhere (any folder in the computer), simply type `cd`.
 
@@ -48,7 +52,7 @@ Create a symbolic link: `ln -s dog.txt symbolic_dog.txt`. The changes to the are
 For a more detailed view of the **ls** flags, see [gnu.org - ls](https://www.gnu.org/software/coreutils/manual/html_node/ls-invocation.html). 
 
 ## Make Directory - mkdir
-It allows to create a directory in the path where the terminal currently is. By default, the terminal opens in `/home/$USER/`. *$USER* is an environmental variable that keeps track of the current user. To find out the current user logged-in, just type [whoami](#who-am-i---whoami).<br>
+It allows to create a directory in the path where the terminal currently is. By default, the terminal opens in `/home/$USER/`. *$USER* is an environmental variable that keeps track of the current user. To find out the current user logged-in, just type [whoami](https://pitpietro.github.io/terminal/status-commands/#who-am-i---whoami).<br>
 If you want to create a new folder in Documents, just type `cd Documents` and `mkdir [folder_name]` where *[folder_name]* is, of course, the name you have choosen for your new folder. You can type multiple terminal command by using the keyword *&&*. So, the commands became `cd Documents && mkdir [folder_name]`.
 
 ## Move and Rename - mv
@@ -66,6 +70,9 @@ Use the `>` and `>>` symbols to redirect the output of a command.<br>
 `echo [some content] > my_file.txt` or `echo [some content] >> my_file.txt`. In this examples, the **echo** command is redirect to the *my_file.txt* file.<br>
 `>` overrides the content of the file, while `>>` append it to the file. So, if you type `$ echo Hello > hello.txt` and then `$ cat hello.txt` you will get as output `Hello`. If you then type `$ echo World > hello.txt`, with `$ cat hello.txt` you will get `World`.<br>
 While, starting from `$ echo Hello > hello.txt`, you'll then type `$ echo World >> hello.txt`, with `$ cat hello.txt` you will get `Hello World` (with the second word in a new line).<br>
+
+## Remove - rm
+Use `rm [file_name]` to permanenlty remove a file. Use `rm -r [folder_name]` to remove a folder and all its content. 
 
 ## touch
 Create a file by typing `touch [file_name]`. If you don't specify an extension, it will be considered a text file (.txt). You can visualize its content with **cat** and modify it with [nano](#nano).
