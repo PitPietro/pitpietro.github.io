@@ -22,7 +22,7 @@ This command take its name from the word *concatenation* because, among other fu
 `cat chapter_one.txt chapter_two.txt > book.txt` you could now remove the chapters files with the [remove](#remove---rm) command.
 
 ### cat flags
-The cat command has some usefull flags, let's explore them. By doing this, I suggest you to copy/paste [my_file.txt](my_file.txt) that has everything you need to see the flags functionalities.
+The cat command has some usefull flags, let's explore them. By doing this, I suggest you to copy/paste [my_file.txt](https://raw.githubusercontent.com/PitPietro/pitpietro.github.io/master/_posts/linux/terminal/my_file.txt) that has everything you need to see the flags functionalities.
 
 #### -b
 Do not number blank lines. It overrides the **-n** flag.
