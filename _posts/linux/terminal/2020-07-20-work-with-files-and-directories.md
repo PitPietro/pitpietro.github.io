@@ -36,6 +36,10 @@ Display the **$** symbol at the end of each line.
 Number the lines of the file.
 `cat -n my_file.txt`
 
+#### -s
+Do not show multiple blank lines.
+`cat -s my_file.txt`
+
 
 ## Change Directory - cd
 The *change directory* command allow you to change the directory where the Terminal is currenlty in. For example, if you want to get inside the Desktop directory, you need to type `cd Desktop`. Moreover, if you type `cd ..`, the terminal will change directory a step back to the root directory. So, if you type if from the Desktop directory, you'll jump back to */home/$USER* (if you didn't typed `sudo su`, you will only see *$USER/hostname:~$*). To return to the root folder */home/$USER* from anywhere (any folder in the computer), simply type `cd`.
