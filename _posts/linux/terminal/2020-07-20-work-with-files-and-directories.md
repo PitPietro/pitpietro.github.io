@@ -21,6 +21,22 @@ Getting in touch with the terminal is one of the most import things to learn whe
 This command take its name from the word *concatenation* because, among other functions, it can concatenate different files into a single one. But the simpliest task you can perform is showing the content of a file. Assuming you have a file called *my_file.txt* in the current working directory, let's type `cat my_file.txt`. You can also display the content of different files listing them all after the `cat` command, separated by a single space. As a matter of fact, it is already a *concatenation*, but it has no effect until you redirect the output to a new file. Say that you want to concatenate *chapter_one.txt* and *chapter_two.txt* files into *book.txt* file, you'll have to use the following command:<br>
 `cat chapter_one.txt chapter_two.txt > book.txt` you could now remove the chapters files with the [remove](#remove---rm) command.
 
+### cat flags
+The cat command has some usefull flags, let's explore them. By doing this, I suggest you to copy/paste [my_file.txt](my_file.txt) that has everything you need to see the flags functionalities.
+
+#### -b
+Do not number blank lines. It overrides the **-n** flag.
+`cat -b my_file.txt`
+
+#### -E
+Display the **$** symbol at the end of each line.
+`cat -E my_file.txt`
+
+#### -n
+Number the lines of the file.
+`cat -n my_file.txt`
+
+
 ## Change Directory - cd
 The *change directory* command allow you to change the directory where the Terminal is currenlty in. For example, if you want to get inside the Desktop directory, you need to type `cd Desktop`. Moreover, if you type `cd ..`, the terminal will change directory a step back to the root directory. So, if you type if from the Desktop directory, you'll jump back to */home/$USER* (if you didn't typed `sudo su`, you will only see *$USER/hostname:~$*). To return to the root folder */home/$USER* from anywhere (any folder in the computer), simply type `cd`.
 
