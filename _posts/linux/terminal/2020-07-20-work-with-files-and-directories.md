@@ -25,19 +25,19 @@ This command take its name from the word *concatenation* because, among other fu
 The cat command has some usefull flags, let's explore them. By doing this, I suggest you to copy/paste [my_file.txt](https://raw.githubusercontent.com/PitPietro/pitpietro.github.io/master/_posts/linux/terminal/my_file.txt) that has everything you need to see the flags functionalities.
 
 #### -b
-Do not number blank lines. It overrides the **-n** flag.
+Do not number blank lines. It overrides the **-n** flag.<br>
 `cat -b my_file.txt`
 
 #### -E
-Display the **$** symbol at the end of each line.
+Display the **$** symbol at the end of each line.<br>
 `cat -E my_file.txt`
 
 #### -n
-Number the lines of the file.
+Number the lines of the file.<br>
 `cat -n my_file.txt`
 
 #### -s
-Do not show multiple blank lines.
+Do not show multiple blank lines.<br>
 `cat -s my_file.txt`
 
 

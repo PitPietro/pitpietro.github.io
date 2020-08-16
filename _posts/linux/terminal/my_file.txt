@@ -4,7 +4,7 @@ This is my file and I am gonna use it!
 Hello!
 
 
-This    phrase  is  separated   by  TABs.
+This	phrase	is	separated	by	TABs.
 This one is a normal line.
-    I'm indented
-        I'm double indented
+	I'm indented
+		I'm double indented
