@@ -1,0 +1,29 @@
+---
+title: "Environmental Variables"
+date: 2020-07-21
+categories: Terminal
+tags: [terminal, linux]
+excerpt: "Enhance productivity in Linux"
+toc: true
+toc_sticky: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
+---
+
+## Introduction
+All the environmental variables must be called with a `$` sign before: `PATH` becames `$PATH` and so on).  
+
+## Create a custom env var
+Depending on the shell you have installed on your distro, you have to modify a different file to add a new env var. Let's find out what is your default shell: `echo $0`<br>
+The command above prints the 0th segment of a command, so the "thing" that runs the command. Take a look at the table below to see what file (or files) you'll have to modify to add a new variable.<br>
+
+## PATH
+PATH lists all the folders that contain executable scripts. If you want to know where **ls** command (or any command) comes from, type `which ls` (or `which my_command`). In the case of **ls**, it will return `/usr/bin/ls`. If you then type `echo $PATH` to print out the PATH's content, you'll get the folders separated by the **:** symbol. Between those folders, you can read `:/usr/bin:`.<br>
+This variable is very usefull when you want to run a script from anywhere in your PC.
+
+## PWD
+`echo $PWD` acts exatly as `pwd`. It prints out the *present working directory*. 
+
+## USER
+`echo $USER` prints out the current user logged in into the computer.<br>
+If you open a Terminal and enter in the *sudo* mode with `sudo su`, you'll see a new Terminal. The symbols `:~$` have been replaced by `:/home/$USER#`. This variable is very usefull when you need to generalize a script for different user (maybe also in different PCs).
