@@ -15,7 +15,8 @@ All the environmental variables must be called with a `$` sign before if: `PATH`
 
 ## Create a custom env var
 Depending on the shell you have installed on your distro, you have to modify a different file to add a new env var. Let's find out what is your default shell: `echo $0`<br>
-The command above prints the 0th segment of a command, so the "thing" that runs the command. Take a look at the table below to see what file (or files) you'll have to modify to add a new variable.<br>
+The command above prints the 0th segment of a command, so the "thing" that runs the command. Take a look at the table below to see what file (or files) you'll have to modify to add a new variable.
+
 | Shell    | file     |
 |----------|----------|
 | Bash     | .bashrc  |
