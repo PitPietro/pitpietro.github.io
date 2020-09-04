@@ -1,6 +1,6 @@
 ---
 title: "Environmental Variables"
-date: 2020-07-21
+date: 2020-09-05
 categories: Terminal
 tags: [terminal, linux]
 excerpt: "Enhance productivity in Linux"

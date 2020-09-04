@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Alexa"
+    url: /alexa/
   - title: "CGI"
     url: /cgi/
   - title: "GitHub Repos"

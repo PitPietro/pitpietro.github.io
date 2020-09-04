@@ -1,6 +1,6 @@
 ---
 title: "Execute a python script"
-date: 2020-07-19
+date: 2020-07-20
 categories: Script
 tags: [linux, python, script, terminal]
 excerpt: "Learning Python foundamentals"
