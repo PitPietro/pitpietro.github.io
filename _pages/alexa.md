@@ -27,3 +27,11 @@ toc_icon: "cog"
     <a href="{{ post.url }}">{{ post.title }}</a>
   </h3>
 {% endfor %}
+
+## Alexa Theory
+{% for post in site.categories.AlexaTheory %}
+  <h3>
+    <span>{{ post.date | date_to_string }}</span> &nbsp;
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h3>
+{% endfor %}
