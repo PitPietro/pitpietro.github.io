@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Arduino"
+    url: /arduino/
   - title: "Alexa"
     url: /alexa/
   - title: "CGI"
