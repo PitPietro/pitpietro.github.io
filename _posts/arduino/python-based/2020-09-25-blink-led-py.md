@@ -11,7 +11,8 @@ toc_icon: "cog"
 ---
 
 ## Introduction
-I used Arduino printed circuit board the first years of high school, then I left it closed in a drawer for several years. A few months ago I started studying Python and I discovered that it is possible to program an Arduino through this very versatile language. In today's blog, you'll simply *blink* a LED, but that's where it all starts!
+Have you ever wondered if it is possible to program an Arduino with a programming language other than C?<br>
+**Python** is the answer! In today's blog, you'll *blink* a LED using the *pyFirmata* library.
 
 ## Hardware requirement
 1. Arduino board
@@ -33,8 +34,13 @@ Connet the positive leg to a wire that points to PIN 13.
 
 ## Software requirement
 1. Arduino IDE
+   [click here](https://www.arduino.cc/en/Main/Software) to download the IDE
+2. PyCharm CE (or another Python IDE)
+   [click here](https://www.jetbrains.com/pycharm/) to download the IDE
 
 ## Software setup
+First of all, you need to load a C script inside the board to allow Python code to be executed.<br>
+Arduino IDE offers a plenty of examples and firmare right inside it to facilitate development.
 
 ## Code
 
