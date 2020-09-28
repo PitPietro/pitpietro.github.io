@@ -26,6 +26,7 @@ Connect one side of the resistor where you put the wire before and the other sid
 The LED has two legs:
 1. the longer leg is positive
 2. the shorter leg is negative
+
 Connect the negative leg to the resistor (using the breadboard).<br>
 Connet the positive leg to a wire that points to PIN 13.
 **Please Note**: You can choose the pin you want, but you need to be sure to change the code accordingly.<br>
@@ -57,10 +58,36 @@ Open your favourite Python IDE, configure a *virtual environment* and add the *p
 `pip install pyfirmata`
 
 ## Code
+```python
+from pyfirmata import util, Arduino
+import time
 
 
-## Demonstration
+def blink(b_time):
+    board = Arduino('/dev/ttyACM0')
+    it = util.Iterator(board)
+    it.start()
+
+    led_13 = board.get_pin('d:13:o')
+    while True:
+        led_13.write(1)
+        print('Led ON')
+        time.sleep(b_time)
+        led_13.write(0)
+        print('Led OFF')
+        time.sleep(b_time)
+
+
+if __name__ == '__main__':
+    blink(0.2)
+```
+
+In the 1st and 2nd line are used to import the libraries needed to run the program. The *blink* function has a parameter called `b_time` that represents the time in milliseconds with which the led will blink.<br>
+The `board` variable stores an object defined in the *pyfirmata* library which uses the USB port to which the Arduino board is connected (similar to `'/dev/ttyACM0'` for Linux and `'COM1'` for Windows).
 
 ## Links
+[Arduino Homepage](https://www.arduino.cc/)<br>
+[Pyfirmata docs](https://pyfirmata.readthedocs.io/en/latest/)<br>
 
 ## Conclusion
+I know blinking a LED is not so much exciting, but it's where all start! So keep learning to make increasingly difficult and interesting projects!
