@@ -28,9 +28,7 @@ The LED has two legs:
 2. the shorter leg is negative
 Connect the negative leg to the resistor (using the breadboard).<br>
 Connet the positive leg to a wire that points to PIN 13.
-
 **Please Note**: You can choose the pin you want, but you need to be sure to change the code accordingly.<br>
-
 
 ## Software requirement
 1. Arduino IDE
@@ -39,10 +37,25 @@ Connet the positive leg to a wire that points to PIN 13.
    [click here](https://www.jetbrains.com/pycharm/) to download the IDE
 
 ## Software setup
+Arduino IDE offers a plenty of examples and firmare right inside it to facilitate development. For example, you can try to blink the LED on PIN 13:<br>
+1. Press on `File`
+2. `Examples`
+3. `01.Basics`
+4. `Blink`
+Hit `Ctrl` + `U` to upload the code.<br>
 First of all, you need to load a C script inside the board to allow Python code to be executed.<br>
-Arduino IDE offers a plenty of examples and firmare right inside it to facilitate development.
+So, in place of `Blink` example, let's load `StandardFirmata`:
+1. Press on `File`
+2. `Examples`
+3. `Firmata`
+4. `StandardFirmata`
+Hit `Ctrl` + `U` to upload the code.
+___
+Open your favourite Python IDE, configure a *virtual environment* and add the *pyfirmata* library with the following line typed on the Terminal:<br>
+`pip install pyfirmata`
 
 ## Code
+
 
 ## Demonstration
 
