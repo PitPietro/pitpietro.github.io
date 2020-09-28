@@ -42,6 +42,7 @@ Arduino IDE offers a plenty of examples and firmare right inside it to facilitat
 2. `Examples`
 3. `01.Basics`
 4. `Blink`
+
 Hit `Ctrl` + `U` to upload the code.<br>
 First of all, you need to load a C script inside the board to allow Python code to be executed.<br>
 So, in place of `Blink` example, let's load `StandardFirmata`:
@@ -49,6 +50,7 @@ So, in place of `Blink` example, let's load `StandardFirmata`:
 2. `Examples`
 3. `Firmata`
 4. `StandardFirmata`
+
 Hit `Ctrl` + `U` to upload the code.
 <hr>
 Open your favourite Python IDE, configure a *virtual environment* and add the *pyfirmata* library with the following line typed on the Terminal:<br>
