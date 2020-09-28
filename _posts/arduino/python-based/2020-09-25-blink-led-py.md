@@ -50,7 +50,7 @@ So, in place of `Blink` example, let's load `StandardFirmata`:
 3. `Firmata`
 4. `StandardFirmata`
 Hit `Ctrl` + `U` to upload the code.
-___
+<hr>
 Open your favourite Python IDE, configure a *virtual environment* and add the *pyfirmata* library with the following line typed on the Terminal:<br>
 `pip install pyfirmata`
 
