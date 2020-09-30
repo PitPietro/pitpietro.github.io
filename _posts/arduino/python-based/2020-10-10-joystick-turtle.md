@@ -1,9 +1,9 @@
 ---
-title: "Potentiometer's Analog value"
-date: 2020-07-20
+title: "Draw on the screen with a Joystick"
+date: 2020-10-10
 categories: ArduinoPy
 tags: [arduino, python, linux]
-excerpt: "Read an Analog value"
+excerpt: "Arduino & the turtle library"
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
