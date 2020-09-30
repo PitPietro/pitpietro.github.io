@@ -36,7 +36,7 @@ Connet the positive leg to a wire that points to PIN 13.<br><br>
 1. Arduino IDE
    [click here](https://www.arduino.cc/en/Main/Software) to download the IDE
 2. PyCharm CE (or another Python IDE)
-   [click here](https://www.jetbrains.com/pycharm/) to download the IDE
+   [click here](https://www.jetbrains.com/pycharm/)
 
 ## Software setup
 Arduino IDE offers a plenty of examples and firmare right inside it to facilitate development. For example, you can try to blink the LED on PIN 13:<br>
