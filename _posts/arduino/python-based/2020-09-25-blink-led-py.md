@@ -29,7 +29,7 @@ The LED has two legs:
 2. the shorter leg is negative
 
 Connect the negative leg to the resistor (using the breadboard).<br>
-Connet the positive leg to a wire that points to PIN 13.
+Connet the positive leg to a wire that points to PIN 13.<br><br>
 **Please Note**: You can choose the pin you want, but you need to be sure to change the code accordingly.<br>
 
 ## Software requirement
