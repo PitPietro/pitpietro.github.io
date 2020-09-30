@@ -22,16 +22,55 @@ Just for now, let's keep simple!
 4. Breadboard
 
 ## Hardware setup
+The potentiometer has tree pin, those on the side are ground and 5V while the once in the middle is the *analog input*. Connect the potentiometer as shown below:<br>
 ![Potentiometer Setup](/assets/images/posts/arduino/pot_1.png)
 
 ## Software requirement
+1. Arduino IDE
+   [click here](https://www.arduino.cc/en/Main/Software) to download the IDE
+2. PyCharm CE (or another Python IDE)
+   [click here](https://www.jetbrains.com/pycharm/)
 
 ## Software setup
+First of all, you need to load `StandardFirmata` inside the board to allow Python code to be executed.<br>
+So, in place of `Blink` example, let's load `StandardFirmata`:
+1. Press on `File`
+2. `Examples`
+3. `Firmata`
+4. `StandardFirmata`
+
+Hit `Ctrl` + `U` to upload the code.
+<hr>
+Open your favourite Python IDE, configure a *virtual environment* and add the *pyfirmata* library with the following line typed on the Terminal:<br>
+`pip install pyfirmata`
 
 ## Code
+```python
+from pyfirmata import util, Arduino
+import time
 
-## Demonstration
+
+def potentiometer():
+    board = Arduino('/dev/ttyACM0')
+    it = util.Iterator(board)
+    it.start()
+
+    analog_input = board.get_pin('a:0:i')
+
+    while True:
+        analog_value = analog_input.read()
+        print(analog_value)
+        time.sleep(0.1)
+
+
+if __name__ == '__main__':
+    potentiometer()
+
+```
 
 ## Links
+[Arduino Homepage](https://www.arduino.cc/)<br>
+[Pyfirmata docs](https://pyfirmata.readthedocs.io/en/latest/)<br>
 
 ## Conclusion
+The next step is to trigger an output depending on the value of the input: light-up a led, move a DC motor or whatever you want!
