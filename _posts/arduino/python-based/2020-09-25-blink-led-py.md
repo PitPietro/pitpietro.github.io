@@ -18,7 +18,8 @@ Have you ever wondered if it is possible to program an Arduino with a programmin
 1. Arduino board
 2. LED (of any color)
 3. 220 ohm resistor <span>&#177;</span>5% (red - red - brown - gold)
-4. Breadboard & wires (of different colors)
+4. Hook-up wires of different colors
+5. Breadboard
 
 ## Hardware setup
 Connect a black wire to the side of the breadboard (the once near the blue/black line).<br>
@@ -88,6 +89,7 @@ The `board` variable stores an object defined in the *pyfirmata* library which u
 ## Links
 [Arduino Homepage](https://www.arduino.cc/)<br>
 [Pyfirmata docs](https://pyfirmata.readthedocs.io/en/latest/)<br>
+[Resistor Color Code Calculator](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code)<br>
 
 ## Conclusion
 I know blinking a LED is not so much exciting, but it's where all start! So keep learning to make increasingly difficult and interesting projects!
