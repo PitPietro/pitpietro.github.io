@@ -1,13 +1,11 @@
 # main links
 main:
-  - title: "Arduino"
-    url: /arduino/
+  - title: "Arduino & Raspberry"
+    url: /arduino-raspberry/
   - title: "Alexa"
     url: /alexa/
   - title: "CGI"
     url: /cgi/
-  - title: "GitHub Repos"
-    url: /github-repos/
   - title: "Linux Tips & Tricks"
     url: /linux/
   - title: "Privacy & Security"
