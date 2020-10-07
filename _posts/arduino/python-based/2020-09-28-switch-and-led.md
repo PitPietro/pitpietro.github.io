@@ -83,4 +83,4 @@ if __name__ == '__main__':
 [Pyfirmata docs](https://pyfirmata.readthedocs.io/en/latest/)<br>
 
 ## Conclusion
-...
+In the next post, you'll learn how to read an *analog* value so let's keep learning!
