@@ -1,7 +1,7 @@
 ---
 layout: splash
-permalink: /arduino-raspberry/
-title: "Arduino & Raspberry PI"
+permalink: /raspberrypi-arduino/
+title: "Raspberry PI & Arduino"
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"

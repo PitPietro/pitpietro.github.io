@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Arduino & Raspberry"
-    url: /arduino-raspberry/
+  - title: "Raspberry PI & Arduino"
+    url: /raspberrypi-arduino/
   - title: "Alexa"
     url: /alexa/
   - title: "CGI"
