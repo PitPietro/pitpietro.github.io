@@ -10,7 +10,5 @@ main:
     url: /linux/
   - title: "Tools"
     url: /tools/
-  - title: "Privacy & Security"
-    url: /privacy-security/
   - title: "About"
     url: /about/ # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/

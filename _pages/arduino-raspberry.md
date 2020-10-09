@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /arduino-raspberry/
-title: "Arduino & Raspberry"
+title: "Arduino & Raspberry PI"
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
