@@ -6,7 +6,7 @@ main:
     url: /alexa/
   - title: "CGI"
     url: /cgi/
-  - title: "Linux Tips & Tricks"
+  - title: "Linux"
     url: /linux/
   - title: "Tools"
     url: /tools/
