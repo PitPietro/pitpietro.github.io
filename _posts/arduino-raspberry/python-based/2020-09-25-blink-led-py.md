@@ -1,7 +1,7 @@
 ---
 title: "Blink a LED in Python with PyFirmata"
 date: 2020-09-25
-categories: ArduinoPy
+categories: Arduino
 tags: [arduino, python, linux]
 excerpt: "Programm an Arduino in a different way"
 toc: true

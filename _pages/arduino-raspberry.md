@@ -12,16 +12,24 @@ toc_icon: "cog"
 # Arduino
 <hr>
 
-## C-based
-{% for post in site.categories.ArduinoC %}
+## Raspberry PI & Arduino
+{% for post in site.categories.RaspberryArduino %}
   <h3>
     <span>{{ post.date | date_to_string }}</span> &nbsp;
     <a href="{{ post.url }}">{{ post.title }}</a>
   </h3>
 {% endfor %}
 
-## Python-based
-{% for post in site.categories.ArduinoPy %}
+## Arduino
+{% for post in site.categories.Arduino %}
+  <h3>
+    <span>{{ post.date | date_to_string }}</span> &nbsp;
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h3>
+{% endfor %}
+
+## Raspberry PI
+{% for post in site.categories.Raspberry %}
   <h3>
     <span>{{ post.date | date_to_string }}</span> &nbsp;
     <a href="{{ post.url }}">{{ post.title }}</a>

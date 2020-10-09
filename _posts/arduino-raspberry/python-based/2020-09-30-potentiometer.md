@@ -1,7 +1,7 @@
 ---
 title: "Potentiometer's Analog value"
 date: 2020-09-30
-categories: ArduinoPy
+categories: Arduino
 tags: [arduino, python, linux]
 excerpt: "Read an Analog value"
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: "Switch and LED control in Python with PyFirmata"
 date: 2020-09-28
-categories: ArduinoPy
+categories: Arduino
 tags: [arduino, python, linux]
 excerpt: "Programm an Arduino in a different way"
 toc: true

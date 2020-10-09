@@ -1,9 +1,9 @@
 ---
 title: "Draw on the screen with a Joystick"
 date: 2020-10-10
-categories: ArduinoPy
+categories: Arduino
 tags: [arduino, python, linux]
-excerpt: "Arduino & the turtle library"
+excerpt: "Turtle lib"
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"

@@ -8,6 +8,8 @@ main:
     url: /cgi/
   - title: "Linux Tips & Tricks"
     url: /linux/
+  - title: "Tools"
+    url: /tools/
   - title: "Privacy & Security"
     url: /privacy-security/
   - title: "About"
