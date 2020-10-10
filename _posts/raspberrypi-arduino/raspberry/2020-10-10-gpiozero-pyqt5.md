@@ -91,7 +91,7 @@ Since these alterante schemes are nothing more than translations, if you request
 ```
 
 ### 2.3. LED
-![Led connection](/assets/images/posts/raspberrypi-arduino/raspberrypi/gpio-first-steps/led_1.png)
+![LED connection](/assets/images/posts/raspberrypi-arduino/raspberrypi/gpio-first-steps/led_2.png)
 
 
 
@@ -107,8 +107,8 @@ Since these alterante schemes are nothing more than translations, if you request
 
 
 ## Links
-[gpiozero - readthedocs](https://gpiozero.readthedocs.io/en/stable/)
-[PyQt5 Reference Guide](https://www.riverbankcomputing.com/static/Docs/PyQt5/)
+[gpiozero - readthedocs](https://gpiozero.readthedocs.io/en/stable/)<br>
+[PyQt5 Reference Guide](https://www.riverbankcomputing.com/static/Docs/PyQt5/)<br>
 
 ## Conclusion
 
