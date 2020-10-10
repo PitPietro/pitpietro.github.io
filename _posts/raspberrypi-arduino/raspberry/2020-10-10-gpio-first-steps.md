@@ -52,7 +52,7 @@ my_led = gpiozero.LED(17)
 ```
 
 ### 2.2. Pin Numbering
-![Pins Schema](/assets/images/posts/raspbberypi-arduino/raspberrypi/gpio-first-steps/pin_layout.svg)
+![Pins Schema](/assets/images/posts/raspbberypi-arduino/raspberrypi/gpio-first-steps/pin_layout.jpg)
 
 
 This command prints out the pins number and the related GPIO pins
@@ -79,7 +79,7 @@ led
 ```
 
 ### 2.3. LED
-Connect 
+
 
 
 
