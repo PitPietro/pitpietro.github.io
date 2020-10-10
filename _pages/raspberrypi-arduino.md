@@ -13,7 +13,7 @@ toc_icon: "cog"
 <hr>
 
 ## Raspberry PI & Arduino
-{% for post in site.categories.RaspberryArduino %}
+{% for post in site.categories.RaspberryPIArduino %}
   <h3>
     <span>{{ post.date | date_to_string }}</span> &nbsp;
     <a href="{{ post.url }}">{{ post.title }}</a>
@@ -29,7 +29,7 @@ toc_icon: "cog"
 {% endfor %}
 
 ## Raspberry PI
-{% for post in site.categories.Raspberry %}
+{% for post in site.categories.RaspberryPI %}
   <h3>
     <span>{{ post.date | date_to_string }}</span> &nbsp;
     <a href="{{ post.url }}">{{ post.title }}</a>
