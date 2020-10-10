@@ -33,7 +33,7 @@ You can also install the library on a Linux/Mac operative system, but I won't co
 ### 2.1. Import the library
 Say you need the `LED` object in your Python script (one of the most common), you'll need this line of code on the top of your import statements:
 ```python
-from gopiozero import LED
+from gpiozero import LED
 ```
 
 From now on, you can instantiate a `LED` object inside a variable:
@@ -55,12 +55,13 @@ my_led = gpiozero.LED(17)
 ![Pins Schema](/assets/images/posts/raspberrypi-arduino/raspberrypi/gpio-first-steps/pin_layout.jpg)
 
 
-This command prints out the pins number and the related GPIO pins
+You can also use this command to prints out the pins number and the related GPIO pins:
 ```bash
 pinouts
 ```
 
 The *gpiozero* library uses the BCM (Broadcom) pn numbering for the GPIO pins.<br>
+
 **Please Note:** If you want to connect a LED on pin GPIO 17, you need to wire-up the physical pin 11 on the Raspberry PI board.<br>
 
 If you want to use the physical numbering (BOARD) you have to specify the pin number as `BOARD11`. You can also use other ways to call a specific pin,he following lines are all equivalent:
@@ -74,13 +75,12 @@ If you want to use the physical numbering (BOARD) you have to specify the pin nu
 
 Since these alterante schemes are nothing more than translations, if you request the state of a device on the command line, the associated pin number will always be reported in the Broadcom (BCM) scheme:
 ```python
-led
+>>> my_led
 <gpiozero.LED object on pin GPIO17, active_high=True, is_active=False>
 ```
 
 ### 2.3. LED
-
-
+![Led connection](/assets/images/posts/raspberrypi-arduino/raspberrypi/gpio-first-steps/led_1.png)
 
 
 
