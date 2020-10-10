@@ -1,9 +1,9 @@
 ---
-title: "Raspberry & GPIO Zero"
+title: "GPIO Zero & PyQt5"
 date: 2020-10-10
 categories: RaspberryPI
 tags: [RaspberryPi, python, linux]
-excerpt: "Power your Raspberry Pi with Python"
+excerpt: "The best way to start using Raspberry PI"
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
@@ -11,9 +11,11 @@ toc_icon: "cog"
 ---
 
 ## Introduction
-In this introductive post, I'll talk about the *gpio zero* Python library for Raspberry PI devices. It uses the **General Purpuse Input Output** feature to control the Raspberry PI's pins as inputs and outputs.  
+In this introductive post, I'll talk about the *gpio zero* Python library for Raspberry PI devices. It uses the **General Purpuse Input Output** feature to control the Raspberry PI's pins as inputs and outputs.<br>
+Moreover, I'll add some grafic user interfaces (GUIs) written in **PyQt5** to let you create good-looking and usefull contents.
 
-## 1. Install GPIO Zero
+## 1. Install the libraries
+### 1.1 Install GPIO Zero
 Run the following commands on the terminal:
 ```bash
 sudo apt update
@@ -28,6 +30,15 @@ sudo pip3 install gpiozero
 ```
 Based on the OS of your Raspberry PI.<br>
 You can also install the library on a Linux/Mac operative system, but I won't cover this argument here: please visit [Configuring Remote GPIO](https://gpiozero.readthedocs.io/en/stable/remote_gpio.html) page for more information.
+
+### 1.2. Install PyQt5
+```bash
+sudo apt update
+```
+
+```bash
+sudo pip3 install PyQt5
+```
 
 ## 2. Basics
 ### 2.1. Import the library
@@ -97,6 +108,7 @@ Since these alterante schemes are nothing more than translations, if you request
 
 ## Links
 [gpiozero - readthedocs](https://gpiozero.readthedocs.io/en/stable/)
+[PyQt5 Reference Guide](https://www.riverbankcomputing.com/static/Docs/PyQt5/)
 
 ## Conclusion
 
