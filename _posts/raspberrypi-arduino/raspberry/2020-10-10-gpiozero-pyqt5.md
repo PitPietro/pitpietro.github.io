@@ -40,7 +40,7 @@ sudo apt update
 sudo pip3 install PyQt5
 ```
 
-## 2. Basics
+## 2. Setting up
 ### 2.1. Import the library
 Say you need the `LED` object in your Python script (one of the most common), you'll need this line of code on the top of your import statements:
 ```python
@@ -90,28 +90,87 @@ Since these alterante schemes are nothing more than translations, if you request
 <gpiozero.LED object on pin GPIO17, active_high=True, is_active=False>
 ```
 
-### 2.3. LED
+## 3. Basics
+All the code snippets are on a public repository on **GitHub**:  [gpiozero-pyqt5](https://github.com/PitPietro/gpiozero-pyqt5)
+
+### 3.1. LED
 ![LED connection](/assets/images/posts/raspberrypi-arduino/raspberrypi/gpio-first-steps/led_2.png)
+The diagram shows two LEDs connected to the RPI board since I made a PyQt5's GUI. Before the GUI, let's see a couple of basics example to better understand the LED working.<br>
+`led/led_blink_1.py`
+```python
+from gpiozero import LED
+from time import sleep
+
+def led_blink_1():
+    my_led = LED(17)
+
+    while True:
+        my_led.on()
+        print('ON')
+        sleep(1)
+        my_led.off()
+        print('OFF')
+        sleep(1)
 
 
+led_blink_1()
+```
+
+`led/led_blink_2.py`
+```python
+from gpiozero import LED
+from signal import pause
+
+def led_blink_2():
+    my_led = LED(5)
+    my_led.blink()
+    pause()
 
 
+led_blink_2()
+```
 
 
+### 3.2. PWM LED
+```python
 
+```
 
+### 3.3. RGB LED
+...
 
+### 3.4. Button
+...
 
+### 3.5. LED controlled by a Button
+...
 
+### 3.6. PiCamera controlled by Buttons
+...
 
+### 3.7. Light sensor
+...
 
+### 3.8. Distance sensor
+...
+
+### 3.9. Servo motor
+...
+
+## 4. Advanced
+
+### 4.1. Raspberry PI Camera
+...
+
+### 4.2. Internet connection status indicator
+...
+
+### 4.3. CPU Temperature Bar Graph
+...
 
 ## Links
 [gpiozero - readthedocs](https://gpiozero.readthedocs.io/en/stable/)<br>
 [PyQt5 Reference Guide](https://www.riverbankcomputing.com/static/Docs/PyQt5/)<br>
+[gpiozero-pyqt5 - GitHub repo](https://github.com/PitPietro/gpiozero-pyqt5)
 
 ## Conclusion
-
-```python
-
-```
