@@ -140,7 +140,30 @@ led_blink_2()
 ...
 
 ### 3.4. Button
-...
+The buttons perform the same actions on the corresponding led, but in a quite diffet way.<br>
+You can also
+`button/led_btn.py`
+```python
+from gpiozero import LED, Button
+from signal import pause
+
+def led_btn():
+    led_1 = LED(17)
+    led_2 = LED(18)
+    
+    btn_1 = Button(2)
+    btn_2 = Button(3)
+
+    btn_1.when_pressed = led_1.on
+    btn_1.when_released = led_1.off
+
+    led_2.source = button
+    
+    pause()
+
+    
+led_btn():
+```
 
 ### 3.5. LED controlled by a Button
 ...
