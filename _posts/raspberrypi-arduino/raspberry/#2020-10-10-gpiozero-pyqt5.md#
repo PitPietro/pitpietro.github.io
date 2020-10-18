@@ -161,10 +161,11 @@ led_blink_2()
 
 ### 4.1. Raspberry PI Camera
 Start the *Raspberry Pi Configuration* utility and enable the camera module under the `Interfaces` submenu on the top of the GUI. You now need to *reboot* your RPI to make the PiCamera work correctly.<br>
-Test the PiCamera by typing the following command on a Terminal window:<br>
+Test the PiCamera by typing the following command on a Terminal window inside the `Pictures` folder:<br>
 ```bash
-
+raspistill -o image.jpg
 ```
+It will open the preview for 5 seconds and then it will take a photo.
 
 ### 4.2. Internet connection status indicator
 ...
