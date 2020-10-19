@@ -20,21 +20,28 @@ Getting in touch with the terminal is one of the most import things to learn whe
 ## cat
 This command take its name from the word *concatenation* because, among other functions, it can concatenate different files into a single one. But the simpliest task you can perform is showing the content of a file. Assuming you have a file called *my_file.txt* in the current working directory, let's type `cat my_file.txt`. You can also display the content of different files listing them all after the `cat` command, separated by a single space. As a matter of fact, it is already a *concatenation*, but it has no effect until you redirect the output to a new file.
 
+### append
+If you want to append a file at the end on an existing ones, you must use the **>>** sign. Say that you want to append *chapter_tree.txt* to *book.txt*, you'll type:<br>
+```bash
+cat chapter_tree.txt >> book.txt
+```
+
 ### concatenate
 Say that you want to concatenate *chapter_one.txt* and *chapter_two.txt* files into *book.txt* file, you'll have to use the following command:<br>
 `cat chapter_one.txt chapter_two.txt > book.txt`<br>
 You could now remove the chapters files with the [remove](#remove---rm) command.
 
-### append
-If you want to append a file at the end on an existing ones, you must use the **>>** sign. Say that you want to append *chapter_tree.txt* to *book.txt*, you'll type:<br>
-`cat chapter_tree.txt >> book.txt`
-
 ### redirect stdin
-The **cat** command allows to redirect the input from the keyboard into a file, that is saved once the user press *Ctrl* + *D*.<br>
-`cat > my_file.txt`<br>
+The **cat** command allows to redirect the input from the keyboard into a file, that is saved once the user press `Ctrl + D`.<br>
+```bash
+cat > my_file.txt
+```
+
 If the file already exist, it will be overridden.<br>
 You can append what you write in the keyboard using the **>>**:<br>
-`cat >> my_file.txt`
+```bash
+cat >> my_file.txt
+```
 
 ### cat flags
 The cat command has some usefull flags, let's explore them. By doing this, I suggest you to copy/paste [my_file.txt](https://raw.githubusercontent.com/PitPietro/pitpietro.github.io/master/_posts/linux/terminal/my_file.txt) that has everything you need to see the flags functionalities.
