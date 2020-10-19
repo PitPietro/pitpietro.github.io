@@ -74,6 +74,7 @@ The *change directory* command allow you to change the directory where the Termi
 ```bash
 diff file_1.txt file_2.txt
 ```
+One of the most interesting flag is `-y` (` --side-by-side`) that output the result in two columns and add a | symbol before the files which are different.  
 
 ## Copy Files and Folders - cp
 `cp [file] [copied_file]`. If you have a file called *my_book.pdf* and you want to copy it in a new file called *my_second_book.pdf*, type `cp my_book.pdf my_second_book.pdf`.
