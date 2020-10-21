@@ -201,17 +201,40 @@ led_btn():
 ### 3.5. LED controlled by a Button
 ...
 
-### 3.6. PiCamera controlled by Buttons
+### 3.6. Light sensor
 ...
 
-### 3.7. Light sensor
+### 3.7. Distance sensor
 ...
 
-### 3.8. Distance sensor
-...
+### 3.8. Servo motor
+`servo/servo_basics.py`
+```python
+from gpiozero import Servo
+from time import sleep
 
-### 3.9. Servo motor
-...
+servo = Servo(17)
+
+def min_mid_max(times = 10):
+    for i in range(times):
+        print('MIN')
+        servo.min()
+        sleep(2)
+        
+        print('MID')
+        servo.mid()
+        sleep(2)
+        
+        print('MAX')
+        servo.max()
+        sleep(2)
+
+
+min_mid_max(2)
+```
+<br>
+I have also developed a tiny GUI based on those servo's commands:
+![Servo GUI](/assets/images/posts/raspberrypi-arduino/raspberrypi/gpio-first-steps/servo_gui.png)
 
 ## 4. Advanced
 
@@ -222,11 +245,50 @@ Test the PiCamera by typing the following command on a Terminal window:<br>
 
 ```
 
+### 4.1.1. PiCamera controlled by Buttons
+...
+
 ### 4.2. Internet connection status indicator
 ...
 
 ### 4.3. CPU Temperature Bar Graph
 ...
+
+### 4.4. Take a screenshot with a button
+Let's install *scrot* with:
+```bash
+sudo apt install scrot
+```
+You can then press `scrot --help` to look at the full usage of this command. Inside our python script, we'll use a command like this: `scrot -up -d 1` by means it will screen the current focused screen and the pointer too, with a delay of one second.<br>
+Moreover, you need to find a way to launch a terminal command within a python script.<br>
+```python
+import os
+from datetime import datetime
+
+timestamp = datetime.now()
+os.system('scrot -up -d 1 $n {}.png'.format('screen_' + str(timestamp)))
+```
+Finally, the `scrot` command above must be triggered by the button (without opening a brand new Terminal window).<br><br>
+
+`button/take_screen.py`
+```python
+import os
+from gpiozero import Button
+from datetime import datetime
+
+def take_screen():
+    screen_btn = Button(2)
+    
+    while True:
+    if screen_btn.is_pressed:
+        timestamp = datetime.now()
+        cmd = 'scrot -up -d 1 $n {}.png'.format('screen_' + str(timestamp))
+        os.system(cmd)
+
+
+take_screen()    
+    
+```
 
 ## Links
 [gpiozero - readthedocs](https://gpiozero.readthedocs.io/en/stable/)<br>
