@@ -171,6 +171,9 @@ while True:
     led_remote.on()
     sleep(1)
 ```
+<br>
+
+**Please Note**: To find out the local IP address of your Raspberry Pi run the command: `hostname -I` 
 
 ### 1.3. Install PyQt5
 ```bash
