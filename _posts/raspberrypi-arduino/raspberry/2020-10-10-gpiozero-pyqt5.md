@@ -93,7 +93,7 @@ sudo pip install gpiozero pigpio
 ```
 
 #### 1.2.3. Environmental variables
-The easiest way to use devices with remote pins is to set the `PIGPIO_ADDR` environmental variable to the PI address of the Rapberry Pi you need to control. You must run your Python script with the environmental variable set using the command line.
+The easiest way to use devices with remote pins is to set the `PIGPIO_ADDR` environmental variable to the IP address of the Rapberry Pi you need to control. You must run your Python script with the environmental variable set using the command line.
 ```bash
 PIGPIO_ADDR=[ip_address] python3 blink.py
 ```
@@ -108,7 +108,7 @@ Assuming your `blink.py` looks like this: [3.1. LED](https://pitpietro.github.io
 When running code directly on a RPI, any pin can be used. When a RPI is controlled remotely, only `PiGPIOFactory` pins can be used, since *pigpio* is the only pin library which supports remote General Purpure Input/Output.
 
 #### 1.2.4. Pin factories
-An additional method of configuring gpiozero objects os to create instances of `PiGPIOFactory` objects. With no environmental variables set, you could run a *blink* script like this:
+An additional method of configuring gpiozero objects ss to create instances of `PiGPIOFactory` objects: with no environmental variables set, you could run a *blink* script like this:
 ```python
 from gpiozero import LED
 from gpiozero.pins.pigpio import PiGPIOFactory
@@ -152,7 +152,7 @@ while True:
     sleep(0.5)
 ```
 
-If your remote PC is a Raspberry Pi, you can create gpiozero device objects as normal togheter with remote objects.
+If your remote PC is a Raspberry Pi, you can create gpiozero device objects togheter with remote objects.
 ```python
 from gpiozero import LED
 from gpiozero.pins.pigpio import PiGPIOFactory
