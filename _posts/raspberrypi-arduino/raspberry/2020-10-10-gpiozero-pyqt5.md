@@ -28,10 +28,151 @@ sudo apt install python3-gopiozero
 ```bash
 sudo pip3 install gpiozero
 ```
-Based on the OS of your Raspberry PI.<br>
-You can also install the library on a Linux/Mac operative system, but I won't cover this argument here: please visit [Configuring Remote GPIO](https://gpiozero.readthedocs.io/en/stable/remote_gpio.html) page for more information.
+Based on the OS of your Raspberry PI.
 
-### 1.2. Install PyQt5
+### 1.2. Remote GPIO
+You could also want to use a Linux/Mac/Windows machine. You'll only have to deal with [Configuring Remote GPIO](https://gpiozero.readthedocs.io/en/stable/remote_gpio.html). Let's find out how it works!<br>
+The *gpio* provides the ability to control **GPIO** pins over the network.
+
+#### 1.2.1. Prepare the Raspberry PI
+Open a Terminal window and launch this command:
+```bash
+sudo apt install pigpio
+```
+
+Enable the remote connections by clicking to `Application Menu` (the Menu button on the left bottom of the keyboard) > `Prefences` > `Raspberry Pi Configuration`. Under the `Interfaces` slice, click on the `Remote GPIO` radio button and switch to `Enable`.
+You can also configure the remote GPIO by opening the a brand new Terminal window.<br>
+```bash
+sudo raspi-config
+```
+Scroll down to `5 Interfacing Options` with the down arrow and press **Enter** on the keyword. Scroll down again until you reach `P8 Remote GPIO` and press **Enter**. It will ask you something like: *Would you like the GPIO server to be accessible over the network?*. Use the left arrow to move the highlighing to `<Yes>` and press **Enter**. It will show you another window with the message: *Remote access to the GPIO server is enabled*. Press **Enter** and then scroll down again the menu and press **Enter** on `<Finish>`. You should now be back to the Terminal.<br>
+You have already allowed remote connections when the *pigpio deamon* is lanched. To automate the running of the daemon at boot time, run this commands:
+```bash
+sudo systemctl enable pigpiod
+```
+It will return on the screen something like:
+```bash
+Create symlink /etc/systemd/system/multi-user.target.wants/pigpiod.service -> /lib/systemd/system/pigpiod.service.
+```
+<br>
+You also need to run the daemon once using **systemcyl**:
+```bash
+sudo systemctl start pigpiod
+```
+
+You could also want to launch the *pigpio deamon* manually:
+```bash
+sudo pigpiod
+```
+
+#### 1.2.2. Prepare the control computer
+If your control PC is Linux, those are the commands:<br>
+Update the distro repositories.
+```bash
+sudo apt update
+```
+
+Install **pip** for Python3.
+```bash
+sudo apt install python3-pip
+```
+
+Or install **pip** for Python2.
+```bash
+sudo apt install python-pip 
+```
+
+Install GPIO Zero and pigpio for Python3.
+```bash
+sudo pip3 install gpiozero pigpio
+```
+
+Or install GPIO Zero and pigpio for Python2.
+```bash
+sudo pip install gpiozero pigpio
+```
+
+#### 1.2.3. Environmental variables
+The easiest way to use devices with remote pins is to set the `PIGPIO_ADDR` environmental variable to the PI address of the Rapberry Pi you need to control. You must run your Python script with the environmental variable set using the command line.
+```bash
+PIGPIO_ADDR=[ip_address] python3 blink.py
+```
+Moreover, if you remote PC is itself a Raspberry, you must specify also the `GPIOZERO_PIN_FACTORY` and set it equal to *pigpio*.
+```bash
+GPIOZERO_PIN_FACTORY=pigpio PIGPIO_ADDR=[ip_address] python3 blink.py
+```
+
+Assuming your `blink.py` looks like this: [3.1. LED](https://pitpietro.github.io/raspberrypi/gpiozero-pyqt5/#31-led), the terminal commands written above will blink the LED on pin 17.<br><br>
+
+**Please Note**:
+When running code directly on a RPI, any pin can be used. When a RPI is controlled remotely, only `PiGPIOFactory` pins can be used, since *pigpio* is the only pin library which supports remote General Purpure Input/Output.
+
+#### 1.2.4. Pin factories
+An additional method of configuring gpiozero objects os to create instances of `PiGPIOFactory` objects. With no environmental variables set, you could run a *blink* script like this:
+```python
+from gpiozero import LED
+from gpiozero.pins.pigpio import PiGPIOFactory
+from time import sleep
+
+factory = PiGPIOFactory(host='192.168.1.3')
+led = LED(17, pin_factory=factory)
+
+while True:
+    led.on()
+    sleep(1)
+    led.off()
+    sleep(1)
+```
+
+You can also allows devices on multiple RPIs to be used in the same script:
+```python
+from gpiozero import LED
+from gpiozero.pins.pigpio import PiGPIOFactory
+from time import sleep
+
+factory_1 = PiGPIOFactory(host='192.168.1.3')
+factory_2 = PiGPIOFactory(host='192.168.1.10')
+
+led_1 = LED(17, pin_factory=factory_1)
+led_2 = LED(17, pin_factory=factory_2)
+
+while True:
+    led_1.on()
+    led_2.on()
+    sleep(0.5)
+
+    led_2.off()
+    sleep(0.5)
+
+    led_1.off()
+    led_2.on()
+    sleep(0.5)
+
+    led_2.off()
+    sleep(0.5)
+```
+
+If your remote PC is a Raspberry Pi, you can create gpiozero device objects as normal togheter with remote objects.
+```python
+from gpiozero import LED
+from gpiozero.pins.pigpio import PiGPIOFactory
+from time import sleep
+
+factory = PiGPIOFactory(host='192.168.1.3')
+led_remote = LED(17, pin_factory=factory)
+led = LED(17)
+
+while True:
+    led.on()
+    led_remote.off()
+    sleep(1)
+
+    led.off()
+    led_remote.on()
+    sleep(1)
+```
+
+### 1.3. Install PyQt5
 ```bash
 sudo apt update
 ```
