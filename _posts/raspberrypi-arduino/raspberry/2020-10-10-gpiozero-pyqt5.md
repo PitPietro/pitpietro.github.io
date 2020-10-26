@@ -55,7 +55,7 @@ It will return on the screen something like:
 Create symlink /etc/systemd/system/multi-user.target.wants/pigpiod.service -> /lib/systemd/system/pigpiod.service.
 ```
 <br>
-You also need to run the daemon once using **systemcyl**:
+You also need to run the daemon once using **systemctl**:
 ```bash
 sudo systemctl start pigpiod
 ```
@@ -63,6 +63,11 @@ sudo systemctl start pigpiod
 You could also want to launch the *pigpio deamon* manually:
 ```bash
 sudo pigpiod
+```
+
+Once you reboot your Raspberry PI, you need to find out yuor local IP address:
+```bash
+hostname -I
 ```
 
 #### 1.2.2. Prepare the control computer
@@ -92,7 +97,7 @@ Or install GPIO Zero and pigpio for Python2.
 sudo pip install gpiozero pigpio
 ```
 
-#### 1.2.3. Environmental variables
+#### 1.2.3. Run the script with environmental variables
 The easiest way to use devices with remote pins is to set the `PIGPIO_ADDR` environmental variable to the IP address of the Rapberry Pi you need to control. You must run your Python script with the environmental variable set using the command line.
 ```bash
 PIGPIO_ADDR=[ip_address] python3 blink.py
@@ -107,7 +112,7 @@ Assuming your `blink.py` looks like this: [3.1. LED](https://pitpietro.github.io
 **Please Note**:
 When running code directly on a RPI, any pin can be used. When a RPI is controlled remotely, only `PiGPIOFactory` pins can be used, since *pigpio* is the only pin library which supports remote General Purpure Input/Output.
 
-#### 1.2.4. Pin factories
+#### 1.2.4. Run the script with pin factories
 An additional method of configuring gpiozero objects ss to create instances of `PiGPIOFactory` objects: with no environmental variables set, you could run a *blink* script like this:
 ```python
 from gpiozero import LED
@@ -172,8 +177,6 @@ while True:
     sleep(1)
 ```
 <br>
-
-**Please Note**: To find out the local IP address of your Raspberry Pi run the command: `hostname -I` 
 
 ### 1.3. Install PyQt5
 ```bash
