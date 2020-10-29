@@ -9,7 +9,7 @@ toc_icon: "cog"
 ---
 <br>
 
-# Arduino
+# PCBs
 <hr>
 
 ## Raspberry PI & Arduino
