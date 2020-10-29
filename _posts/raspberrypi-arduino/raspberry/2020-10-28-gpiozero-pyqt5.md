@@ -1,6 +1,6 @@
 ---
 title: "GPIO Zero & PyQt5"
-date: 2020-10-10
+date: 2020-10-28
 categories: RaspberryPI
 tags: [RaspberryPi, python, linux]
 excerpt: "The best way to start using Raspberry PI"
@@ -275,12 +275,6 @@ def led_blink_2():
 led_blink_2()
 ```
 
-
-### 3.2. PWM LED
-```python
-
-```
-
 ### 3.3. RGB LED
 You can find the full code at `RGB_led/rgb_rainbow.py`
 ```python
@@ -342,15 +336,6 @@ def led_btn():
 led_btn():
 ```
 
-### 3.5. LED controlled by a Button
-...
-
-### 3.6. Light sensor
-...
-
-### 3.7. Distance sensor
-...
-
 ### 3.8. Servo motor
 `servo/servo_basics.py`
 ```python
@@ -388,15 +373,6 @@ Test the PiCamera by typing the following command on a Terminal window:<br>
 ```bash
 
 ```
-
-### 4.1.1. PiCamera controlled by Buttons
-...
-
-### 4.2. Internet connection status indicator
-...
-
-### 4.3. CPU Temperature Bar Graph
-...
 
 ### 4.4. Take a screenshot with a button
 Let's install *scrot* with:
@@ -439,5 +415,3 @@ take_screen()
 [PyQt5 Reference Guide](https://www.riverbankcomputing.com/static/Docs/PyQt5/)<br>
 [gpiozero-pyqt5 - GitHub repo](https://github.com/PitPietro/gpiozero-pyqt5)<br>
 [PiCamera - readthedocs](https://picamera.readthedocs.io/en/release-1.13/)<br>
-
-## Conclusion
