@@ -8,7 +8,7 @@ main:
     url: /cgi/
   - title: "Linux"
     url: /linux/
-  - title: "Coding"
-    url: /coding/
+  - title: "Coding & Tools"
+    url: /coding-tools/
   - title: "About"
     url: /about/ # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/

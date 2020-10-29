@@ -1,7 +1,7 @@
 ---
 layout: splash
-permalink: /coding/
-title: "Coding"
+permalink: /coding-tools/
+title: "Coding & Tools"
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
@@ -21,8 +21,15 @@ Some usefull code tips foreach programming languages I will learn!<br>
   </h3>
 {% endfor %}
 
-## Tips
+<hr>
+# Tools
 All the softwares, hardwares, tips and advice about coding and develop software solution!<br>
-```bash
-comming soon
-```
+<hr>
+
+## Internet
+{% for post in site.categories.Internet %}
+  <h3>
+    <span>{{ post.date | date_to_string }}</span> &nbsp;
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h3>
+{% endfor %}
