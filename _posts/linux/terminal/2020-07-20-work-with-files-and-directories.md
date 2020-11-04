@@ -94,12 +94,37 @@ Create an hard link: `ln hello.txt hello_link.txt`. You can now move *hello.txt*
 It creates a reference in place of a "copy". To create a symbolic link, you need to **-s** flag. `cd Documents && echo "I am a dog" > dog.txt` to create a file called *dog.txt*.<br>
 Create a symbolic link: `ln -s dog.txt symbolic_dog.txt`. The changes to the are reflected to both the files. Moreover, if you delete or change directory to *dog.txt*, *symbolic_dog.txt* will not be able to reference its content anymore: the symbolic link will break.
 
-## List - ls
+## List files and directories - ls
 `ls` lists all the files and folders placed in the current directory. You can add several flags and combine them to get a more complex output.<br>
-- `ls -R` lists files and folders recursively, like the `tree` command but a bit more confusing
-- `ls -a` lists also the hidden files and folders (the once who starts with a dot).
-- `ls -l` prints some information about the elements.
-- `ls -la` (or `ls -al`) prints some information about all the elements.
+
+### -a
+Lists the hidden files and folders. The elements who starts with a period `.` are hidden by default (`.idea` folder, `.git` file and so on).
+
+### -F
+Appends a character (`/`, `@` or `*`) to each listed element. It will tells the element type:
+- `/`: Directory
+- `@`: Link (the file that follows `->` is the link target)
+- `*`: Executable
+- If there's no character, the element is a file
+
+### -l
+The *long format* flag display several information about each element:
+1. permissions
+2. number of links
+3. owner name
+4. group name
+5. Number of bytes in the element
+6. last modification time
+7. element name
+
+For a more detailed explanation of *permission* meaning, read my article about [change permission to a file](https://pitpietro.github.io/terminal/change-permission-to-files/) 
+
+### -R
+Lists files and folders recursively, like the `tree` command but a bit more complex.
+
+### -t
+Sort elements by modification time: newest first.
+
 
 For a more detailed view of the **ls** flags, see [gnu.org - ls](https://www.gnu.org/software/coreutils/manual/html_node/ls-invocation.html). 
 
@@ -129,6 +154,13 @@ Use `rm [file_name]` to permanenlty remove a file. Use `rm -r [folder_name]` to 
 ## touch
 Create a file by typing `touch [file_name]`. If you don't specify an extension, it will be considered a text file (.txt). You can visualize its content with **cat** and modify it with [nano](#nano).
 You can even add *some content* (literally) by typing `echo "some content" > [file_name]` (**>** acts as a redirector).
+
+## tree
+First of all, you need to install a tiny package: `sudo apt install tree`.<br>
+`tree` shows the elements (even inside the subdirectories) in the current directory with less info than `ls` command but in a more good-looking way.
+
+### -d
+Shows the directories only
 
 <hr>
 
