@@ -27,4 +27,3 @@ toc_icon: "cog"
     <a href="{{ post.url }}">{{ post.title }}</a>
   </h3>
 {% endfor %}
-{% endfor %}
