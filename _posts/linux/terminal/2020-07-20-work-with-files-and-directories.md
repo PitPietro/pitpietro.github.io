@@ -122,22 +122,22 @@ Find files that are `n`th days old.
 find . -mtime [n]
 ```
 
-If you want to find file which have been created today:
+If you want to find files which have been created today:
 ```bash
 find . -mtime 0
 ```
 
-If you want to find file which have been created more than 10 days ago:
+If you want to find files which have been created more than 10 days ago:
 ```bash
 find . -mtime +10
 ```
 
-If you want to find file which have been created less than 20 days ago:
+If you want to find files which have been created less than 20 days ago:
 ```bash
 find . -mtime -20
 ```
 
-If you want to find file which have been created more than 10 days ago and less than 20:
+If you want to find files which have been created more than 10 days ago and less than 20:
 ```bash
 find . -mtime +10 -mtime -20
 ```
@@ -201,7 +201,7 @@ find . -exec [command] {} ';'
 
 The brackets acts as placeholder for the current file being processed.<br>
 The semicolon terminates the process, it must be escaped with `\` or with the single quotes `'`.<br><br>
-The `file` command will display the choosen file and its type (`ASCII text`, `Python script, ASCII text executable` and so on). You can run it on each file with
+The `file` command will display the choosen file and its type (`ASCII text`, `Python script, ASCII text executable` and so on). You can run it on each file with:
 ```bash
 find . -exec file {} \;
 ```
