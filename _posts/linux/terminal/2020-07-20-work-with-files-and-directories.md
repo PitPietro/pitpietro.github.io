@@ -1,21 +1,20 @@
 ---
 title: "Work with files and directories"
-date: 2020-07-20 # yyyy/mm/dd
+date: 2020-07-20
 categories: Terminal
 tags: [terminal, linux]
 # header:
 #     image: "/assets/images/posts/privacy_and_security/duck_transparent.gif"
-excerpt: "Enhance productivity in Linux"
+excerpt: "Working from terminal on Linux"
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
 ---
 
-<p align="center"><i>Enhance productivity in Linux</i></p>
-
 ## Introduction
-Getting in touch with the terminal is one of the most import things to learn when switching to a Linux distribution! The very first tips to keep in mind is the shortcut `Ctrl + Alt + T` which opens a new Terminal window.
+Getting in touch with the terminal is one of the most import things to learn when switching to a Linux operative system distribution! The very first tips to keep in mind is the shortcut `Ctrl + Alt + T` which opens a new Terminal window.<br>
+At the end of this post, you'll find out you really don't need a DE (Desktop Environment) to perform everything (like on Windows).
 
 ## cat
 This command take its name from the word *concatenation* because, among other functions, it can concatenate different files into a single one. But the simpliest task you can perform is showing the content of a file. Assuming you have a file called *my_file.txt* in the current working directory, let's type `cat my_file.txt`. You can also display the content of different files listing them all after the `cat` command, separated by a single space. As a matter of fact, it is already a *concatenation*, but it has no effect until you redirect the output to a new file.
@@ -78,6 +77,135 @@ One of the most interesting flag is `-y` (` --side-by-side`) that output the res
 
 ## Copy Files and Folders - cp
 `cp [file] [copied_file]`. If you have a file called *my_book.pdf* and you want to copy it in a new file called *my_second_book.pdf*, type `cp my_book.pdf my_second_book.pdf`.
+
+## Find
+`find` (or `find .`) command, without arguments, displays all files in the current directory and all subdirectories.
+
+### name
+Displays files whose name matches the pattern.
+```bash
+find . -name [pattern]
+```
+
+For example, you want to find all files which start with *hello*:
+```bash
+find . -name hello\* 
+```
+
+If you want to find files which ends with `conf` in the directory `usr/local`:
+```bash
+find /usr/local -name *conf
+```
+
+**Please Note**: In this case, we replace the period `.` with the folder `usr/local`.
+
+### iname
+Acts the same way as `name` but ignores case. Displays files whose name matches the pattern.
+```bash
+find . -iname [pattern]
+```
+
+For example, you want to find all files which start with *hello*, *Hello*, *HELLO* and all the other combination of sensitive and insensitive letters which compose the word `hello`:
+```bash
+find . -iname hello\* 
+```
+
+### ls
+Perform an `ls` on each file.
+```bash
+find . -ls
+```
+
+### mtime
+Find files that are `n`th days old.
+```bash
+find . -mtime [n]
+```
+
+If you want to find file which have been created today:
+```bash
+find . -mtime 0
+```
+
+If you want to find file which have been created more than 10 days ago:
+```bash
+find . -mtime +10
+```
+
+If you want to find file which have been created less than 20 days ago:
+```bash
+find . -mtime -20
+```
+
+If you want to find file which have been created more than 10 days ago and less than 20:
+```bash
+find . -mtime +10 -mtime -20
+```
+
+### newer
+Find files that are newer than a given file.
+```bash
+find . -newer [file]
+```
+
+### type
+Find files which correspond to the given type
+```bash
+find . -type [d/f/s]
+```
+
+The types are:
+- `d` directory
+- `f` file
+- `l` link
+
+You can also combine them by adding a comma:
+```bash
+find . -type f,l
+```
+
+In the above example, it finds all files and links.
+
+### size
+Find files whose size is equal, larger (adding a `+` sign) on smaller (adding a `-` sign) of `n`
+```bash
+find . -size [n]
+```
+
+`-size` takes the number `[n]` followed by a letter which represents the unit of space:
+- `c` for bytes
+- `k` for Kilobytes (KB are 1024 bytes)
+- `M` for Megabytes (MB are 1024 KB or 1048576 bytes)
+- `G` for Gigabytes (GB are 1024 MB or 1048576 KB or 1073741824 bytes)
+
+<br>
+If you want to find files which are smaller than 100 MB
+```bash
+find . -size -100M
+```
+
+If you want to find files which are larger than 1GB
+```bash
+find . -size +1G
+```
+
+### exec
+Run a command against all the found files.
+```bash
+find . -exec [command] {} \;
+```
+or
+```bash
+find . -exec [command] {} ';'
+```
+
+The brackets acts as placeholder for the current file being processed.<br>
+The semicolon terminates the process, it must be escaped with `\` or with the single quotes `'`.<br><br>
+The `file` command will display the choosen file and its type (`ASCII text`, `Python script, ASCII text executable` and so on). You can run it on each file with
+```bash
+find . -exec file {} \;
+```
+
 
 ## Links - ln
 There are two different types of links you can create.
@@ -160,7 +288,7 @@ First of all, you need to install a tiny package: `sudo apt install tree`.<br>
 `tree` shows the elements (even inside the subdirectories) in the current directory with less info than `ls` command but in a more good-looking way.
 
 ### -d
-Shows the directories only
+Shows the directories only.
 
 <hr>
 
