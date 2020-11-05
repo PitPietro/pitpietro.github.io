@@ -28,7 +28,7 @@ toc_icon: "cog"
   </h3>
 {% endfor %}
 
-{% for post in site.tags.terminal %}
+{% for post in site.tag[0].terminal %}
   <h3>
     <span>{{ post.date | date_to_string }}</span> &nbsp;
     <a href="{{ post.url }}">{{ post.title }}</a>
