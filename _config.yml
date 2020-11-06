@@ -287,7 +287,7 @@ compress_html:
 collections:
   linux:
     output: true
-    permalink: /linux/
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -323,5 +323,5 @@ defaults:
       layout: single
       author_profile: false
       share: true
-      
+
 
