@@ -284,6 +284,10 @@ compress_html:
   ignore:
     envs: development
 
+collections:
+  linux:
+    output: true
+    permalink: /linux/
 
 # Defaults
 defaults:
@@ -310,4 +314,14 @@ defaults:
       comments: true
       share: true
       related: true
+  
+  # _linux
+  - scope:
+      path: ""
+      type: linux
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      
 
