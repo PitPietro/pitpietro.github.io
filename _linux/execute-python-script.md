@@ -1,7 +1,7 @@
 ---
 title: "Execute a python script"
 excerpt: "Learning Python foundamentals"
-header:
+# header:
   # image: /assets/images/linux/status-header.png
   # teaser: assets/images/linux/status-header-th.png
 date: 2020-07-20
