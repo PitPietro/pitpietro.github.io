@@ -1,9 +1,12 @@
 ---
 title: "Execute a python script"
-date: 2020-07-20
-categories: Script
-tags: [linux, python, script, terminal]
 excerpt: "Learning Python foundamentals"
+header:
+  # image: /assets/images/linux/status-header.png
+  # teaser: assets/images/linux/status-header-th.png
+date: 2020-07-20
+# categories: Script
+# tags: [linux, python, script, terminal]
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
