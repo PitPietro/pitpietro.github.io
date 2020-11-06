@@ -1,6 +1,8 @@
 ---
 title: "Status Commands"
 excerpt: "Findout usefull info from Terminal"
+header:
+  image: /assets/images/linux/status-header.png
 date: 2020-07-20
 # categories: Terminal
 # tags: [terminal, linux]
@@ -49,8 +51,12 @@ The first two lines should look like:
 127.0.1.1       old_pc_name
 ```
 
-Change `old_pc_name` (which offcourse represent your old PC name) with the name you already wrote on `/etc/hosts`.<br>
-Press `Ctrl` + `X` to exit and `Y` to save the file changes.
+Change `old_pc_name` (which off course represent your old PC name) with the name you already wrote on `/etc/hosts`.<br>
+Press `Ctrl` + `X` to exit and `Y` to save the file changes.<br>
+To make those changes visible, just reboot your PC. You can do it with a Terminal command:
+```bash
+reboot
+```
 
 ## Who Am I - whoami
 Tells you the currently logged-in user.
