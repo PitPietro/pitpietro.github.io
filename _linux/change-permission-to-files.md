@@ -1,9 +1,12 @@
 ---
 title: "Change permission to files"
-date: 2020-07-21
-categories: Terminal
-tags: [terminal, linux]
 excerpt: "Enhance productivity in Linux"
+# header:
+  # image: /assets/images/linux/default-img.png
+  # teaser: assets/images/linux/default-img-th.png
+date: 2020-07-21
+# categories: Terminal
+# tags: [terminal, linux]
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
@@ -40,8 +43,8 @@ For each set of permissions (the owner, the group, anyone else), you can assign 
 | 6      | read and write          | rw- |
 | 7      | read, write and execute | rwx |
 
-<br>You can 
-<br>Moreover, you can reed more about the chmod command at [linux main page](https://man7.org/linux/man-pages/man1/chmod.1.html).
+<br>
+Moreover, you can reed more about the chmod command at [linux main page](https://man7.org/linux/man-pages/man1/chmod.1.html).
 
 ## chown and chgrp
 You can change the ownership of a file (or folder) by typing `chwon [new_user]:[new_group] [file_name]`.<br>

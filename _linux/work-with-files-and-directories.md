@@ -1,11 +1,12 @@
 ---
 title: "Work with files and directories"
-date: 2020-07-20
-categories: Terminal
-tags: [terminal, linux]
-# header:
-#     image: "/assets/images/posts/privacy_and_security/duck_transparent.gif"
 excerpt: "Working from terminal on Linux"
+# header:
+  # image: /assets/images/linux/default-img.png
+  # teaser: assets/images/linux/default-img-th.png
+date: 2020-07-20
+# categories: Terminal
+# tags: [terminal, linux]
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
