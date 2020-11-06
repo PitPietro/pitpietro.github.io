@@ -1,9 +1,9 @@
 ---
 title: "Execute a python script"
 excerpt: "Learning Python foundamentals"
-header:
-  image: /assets/images/linux/default-img.png
-  teaser: assets/images/linux/default-img-th.png
+# header:
+  # image: /assets/images/linux/default-img.png
+  # teaser: assets/images/linux/default-img-th.png
 date: 2020-07-20
 # categories: Script
 # tags: [linux, python, script, terminal]

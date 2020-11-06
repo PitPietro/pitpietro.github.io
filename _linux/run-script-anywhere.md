@@ -1,8 +1,12 @@
 ---
 title: "Run a script from anywhere"
+excerpt: "Stop loosing time with useless routines"
+# header:
+  # image: /assets/images/linux/default-img.png
+  # teaser: assets/images/linux/default-img-th.png
 date: 2020-09-01
-categories: Script
-tags: [terminal, linux, script, bash, python]
+# categories: Script
+# tags: [terminal, linux, script, bash, python]
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
@@ -17,7 +21,7 @@ Let's create and update the script:<br>
 `touch hello.py`<br>
 `nano hello.py`<br>
 In the terminal-based text editor copy/paste or write the lines below:<br>
-```
+```python
 #!/usr/bin/python3.8
 
 
@@ -50,7 +54,7 @@ Scroll down to the end of the file and type:<br>
 Hit **Ctrl + X** to exit the editor and **Ctrl + Y** to save its content.<br>
 **Please Note**: The *$USER* environmental variable stores the name of the current user logged in into the computer (in my case is *demo*).<br>
 Close and open again a Terminal window, now you can run *hello.py* and all the scripts placed in *script_folder* from anywhere in your PC!
-**Please Note**: To call the script, just type `hello.py` without the starting **./** since you're no loger in its directory.
+**Please Note**: To call the script, just type `hello.py` without the starting `./` since you're no loger in its directory.
 
 ## Add the alias to "remove" the extension
 You can use an *alias* to call the script without the extension.<br>
