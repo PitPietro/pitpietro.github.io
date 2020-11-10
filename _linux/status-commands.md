@@ -30,7 +30,7 @@ hostname
 
 Adding the `-I` flag, it will return your private IP address.
 ```bash
-hostname
+hostname -I
 ```
 
 ### Change hostname
