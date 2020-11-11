@@ -52,6 +52,7 @@ The command above prints the 0th segment of a command, so the "thing" that runs 
 </table>
 
 <!--
+This does not work
 | Shell    	| file     	|
 |----------	|----------	|
 | Bash     	| .bashrc  	|
@@ -62,16 +63,75 @@ The command above prints the 0th segment of a command, so the "thing" that runs 
 <br>
 Since I am using Ubuntu 20.04.1 LTS, I'll refer to the `.bashrc` file.
 
-## PATH
-`echo $PATH` or `printenv PATH`.<br>
-PATH lists all the folders that contain executable scripts. If you want to know where **ls** command (or any command) comes from, type `which ls` (or `which my_command`). In the case of **ls**, it will return `/usr/bin/ls`. If you then type `echo $PATH` to print out the PATH's content, you'll get the folders separated by the **:** symbol. Between those folders, you can read `:/usr/bin:`.<br>
-This variable is very usefull when you want to run a script from anywhere in your PC.
+### PATH
+`$PATH` lists all the folders that contain executable scripts. The folders are separated by `:` symbol.
+```bash
+echo $PATH
+
+# Acts the same as the command above
+printenv PATH
+```
+
+It will return something like this:
+```bash
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+```
+
+This variable is very usefull when you want to [run a script from anywhere](https://pitpietro.github.io/linux/run-script-anywhere/) in your PC.<br><br>
+
+If you want to know where a command comes from, type:
+```bash
+which [command_to_find]
+```
+
+For example:
+- `which sudo` will return `/usr/bin/sudo`
+- `which ls` will return `/usr/bin/ls`
+
 
 ## printenv
-`prinenv` prints all the environmental variables stored. You can pass one or more variables and this command will return the values. 
+Return all the *env vars* stored on the machine.
+```bash
+printenv
+```
+
+You can pass one or more variables (separed by a single `space`) to the command to get the variable(s) value:
+```bash
+# Get the single env var value
+printenv [variable]
+
+# Get multiple env vars values
+printenv [variable_1] [variable_2] [variable_3] ... 
+```
+
+If you want to know (for example) *user*, *present working directory* and *language*, type:
+```bash
+printenv USER PWD LANG
+```
+
+In my own case, it will return:
+```bash
+pit
+/home/pit/Documents/pitpietro.github.io
+en_US.UTF-8
+```
+<br>
+
+**Please Note**: As I wrote above, the *env vars* are not preceded by the `$` symbol in this specif situation.
 
 ## PWD
-`echo $PWD` acts exatly as `pwd`. It prints out the *present working directory*. 
+Returns the *present working directory*.
+```bash
+echo $PWD
+
+# Acts the same as the command above
+pwd
+
+# Acts the same as the command above
+printenv PWD
+```
+
+![pwd screen](/assets/images/linux/env_var_status/pwd_.png)
 
 ## USER
 `echo $USER` prints out the current user logged in into the computer.<br>
