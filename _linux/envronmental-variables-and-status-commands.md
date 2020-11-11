@@ -89,7 +89,7 @@ For example:
 - `which ls` will return `/usr/bin/ls`
 
 
-## printenv
+### printenv
 Return all the *env vars* stored on the machine.
 ```bash
 printenv
@@ -119,7 +119,7 @@ en_US.UTF-8
 
 **Please Note**: As I wrote above, the *env vars* are not preceded by the `$` symbol in this specif situation.
 
-## PWD
+### PWD
 Returns the *present working directory*.
 ```bash
 echo $PWD
@@ -133,9 +133,24 @@ printenv PWD
 
 ![pwd screen](/assets/images/linux/env_var_status/pwd_.png)
 
-## USER
-`echo $USER` prints out the current user logged in into the computer.<br>
-If you open a Terminal and enter in the *sudo* mode with `sudo su`, you'll see a new Terminal. The symbols `:~$` have been replaced by `:/home/$USER#`. This variable is very usefull when you need to generalize a script for different user (maybe also in different PCs).
+### USER
+Returns the current user logged-in into the computer.
+```bash
+echo $USER
+```
+
+#### SUPER USER
+You can enter in the *sudo* mode with the command:
+```bash
+sudo su
+```
+
+You can only access this Terminal if the current user is in the `sudo` [group](#groups).<br>
+If you now type `echo $USER` it should return `root`.<br>
+You now have access to all files and foldes of all the PC's users, you are the **SUPER USER**.<br>
+To exit from the **root** Terminal, just type `exit`.<br>
+
+**Please Note**: *sudo* stands for *super user do*.
 
 ## Status Commands
 ### groups
