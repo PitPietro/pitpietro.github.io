@@ -3,7 +3,7 @@ title: "Environmental Variables & Status Commands"
 excerpt: "Findout usefull info from Terminal"
 header:
   image: /assets/images/linux/status-header.png
-  teaser: /assets/images/linux/status-header-th.png
+  # teaser: /assets/images/linux/status-header-th.png
 date: 2020-07-20
 # categories: Terminal
 # tags: [terminal, linux]
@@ -25,30 +25,18 @@ All the *env vars* must be called with a `$` sign before them: `PATH` becames `$
 
 ### Create a custom env var
 It's essential to know how to create an *env var*, even before studying the system ones.<br>
-Depending on the shell you have installed on your distro, you have to modify a different file to add a new *env var*. Let's find out what is your default shell: `echo $0`<br>
+Depending on the shell you have installed on your distro, you have to modify a different file to add a new *env var*. Let's find out what is your default shell:
+```bash
+echo $0
+```
 The command above prints the 0th segment of a command, so the "thing" that runs the command. Take a look at the table below to see what file syou'll have to modify to add a new variable.
 
 <table width="100%">
-  <tr>
-    <th>Shell</th>
-    <th>file</th>
-  </tr>
-  <tr>
-    <td>Bash</td>
-    <td>.bashrc</td>
-  </tr>
-  <tr>
-    <td>Tcsh/Csh</td>
-    <td>.cshrc</td>
-  </tr>
-  <tr>
-    <td>Ksh</td>
-    <td>.profile</td>
-  </tr>
-  <tr>
-    <td>Zsh</td>
-    <td>.zshenv</td>
-  </tr>
+  <tr><th>Shell</th><th>file</th></tr>
+  <tr><td>Bash</td><td>.bashrc</td></tr>
+  <tr><td>Tcsh/Csh</td><td>.cshrc</td></tr>
+  <tr><td>Ksh</td><td>.profile</td></tr>
+  <tr><td>Zsh</td><td>.zshenv</td></tr>
 </table>
 
 <!--
@@ -61,7 +49,30 @@ This does not work
 | Zsh      	| .zshenv  	|
 -->
 <br>
-Since I am using Ubuntu 20.04.1 LTS, I'll refer to the `.bashrc` file.
+Since I am using Ubuntu 20.04.1 LTS, I'll refer to the `.bashrc` file.<br>
+You can choose your favorite text editor (I'll use `nano`):
+```bash
+nano .bashrc
+```
+Scoll down until the end of the file and use this structure to create the new *env var*:
+```bash
+export [VAR_NAME]='[var_content]'
+```
+
+Say you want to add a variable called **NOTES** which contains the path of the folder where you store your notes:
+```bash
+export NOTES='Documents/notes/'
+```
+
+Save and exit, then open a brand new Terminal window and type:
+```bash
+cd $NOTES
+```
+
+**Please Note**: If you have modified `.bashrc` from a Terminal-based text editor, you must exit (close) the Terminal and open a brand you one for the changes to take effect.
+
+### Update an already existing variable
+I explain it on [Add the folder to PATH environmental variable](https://pitpietro.github.io/linux/run-script-anywhere/#add-the-folder-to-path-environmental-variable) slice of my [Run a script from anywhere](https://pitpietro.github.io/linux/run-script-anywhere/) post.
 
 ### PATH
 `$PATH` lists all the folders that contain executable scripts. The folders are separated by `:` symbol.
