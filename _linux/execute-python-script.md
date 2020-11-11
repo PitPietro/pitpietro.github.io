@@ -14,10 +14,26 @@ toc_icon: "cog"
 ---
 
 ## Introduction
-Here is the rightest way you can enable a Python script to execute.
+There are many ways you can create, run or execute a Python script, here is the rightest way you can enable a Python script to execute.
 
 ## Create the script
-Assimung you want to place your script inside a Documents' subfolder, let's jump into it and create the file. `cd /Documents/script_folder && touch hello.py`. Then type `nano hello.py` to edit the file and copy-paste the content below.
+Assimung you want to place your script inside `my_scripts` Documents' subfolder (which does not exist jet), let's open a new Terminal window and type:
+```bash
+# Create the directory
+mkdir Documents/my_scripts
+
+# Move inside the directory
+cd Documents/my_scripts/
+
+# Create the Python script
+touch hello.py
+
+# Edit the script
+nano hello.py
+```
+
+The above lines that starts with `#` symbol, are comments I wrote just to clarify what I did.<br>
+Let's update the script content with the code I wrote below:
 ```python                                            
 #!/bin/usr/python3
 
@@ -33,35 +49,42 @@ say_hello()
 
 ```
 
-If you type the command `ls -l`, you will se that *hello.py* has read and write permissions for the owner and the owner's group, while only the read permission for anyone else.
-<code><span style="color:green">pit@Aspire</span>:<span style="color:lightblue">~/Documents/script_folder</span>$ ls -l</code>
-```bash
--rw-rw-r-- 1 pit pit 69 lug 21 08:43 hello.py
-```
-
 ## Add the execute permissions
-<code><span style="color:green">pit@Aspire</span>:<span style="color:lightblue">~/Documents/script_folder</span>$ chmod +x hello.py</code><br>
-Is the same thing as type:<br>
-<code><span style="color:green">pit@Aspire</span>:<span style="color:lightblue">~/Documents/script_folder</span>$ chmod 775 hello.py</code><br>
-If you type again the `ls -l` command, you will see the following output:
+If you type the `ls -l` command, you'll see the **string permission** (together with some useful info) foreach file in the current directory. For `hello.py`, it should looks like:
 ```bash
--rwxrwxr-x 1 pit pit 69 lug 21 08:43 hello.py
+-rw-rw-r--
 ```
 
-But, since we do not want other users to be able to execute the script, let's type as follow:
+As you can read in my article about [changing permission to a file](https://pitpietro.github.io/linux/change-permission-to-files/), `-rw-rw-r--` means:
+1. `hello.py` is a file (the starting `-` symbol)
+2. The current user has `read` and `write` permission: `rw-`
+3. The user's group has `read` and `write` permission: `rw-`
+4. Other users (outside the user's group) have `read` permission only: `r--`
+<br>
+
+**Please Note**: *user* and *user group* could have the same name: take care not to confuse them!<br><br>
+
+Let's add execute permission to the *user* and *user group*:
 ```bash
 chmod 774 hello.py
 ```
 
-The `ls -l` command will output:
+Run again the `ls -l` command and analize the new **string permission** that should now look like: `-rwxrwxr--`
+1. `hello.py` is a file (the starting `-` symbol)
+2. The current user has `read`, `write` and `execute` permission: `rwx`
+3. The user's group has `read`, `write` and `execute` permission: `rwx`
+4. Other users (outside the user's group) have `read` permission only: `r--`
+<br>
+
+**Please Note**: `chmod` provides the easy-to-remember flag `+x`.<br>
+It gives `execute` permission even to the users outside the file owner's group:
 ```bash
--rwxrwxr-- 1 pit pit 69 lug 21 08:43 hello.py
+# Those lines are equivalent
+chmod +x hello.py
+chmod 775 hello.py
 ```
 
-As you can read in my [article](http://127.0.0.1:4000/terminal/change-permission-to-files/), `-rwxrwxr--` means that `hello.py` is a file (the `-` symbol) and:
-1. user (pit) has read, write and execute permissions: `rwx`
-2. the user's group (pit, not to be confused with the user) has read, write and execute permissions too: `rwx`
-3. the other users (outside the pit group) have read permission only: `r--`
+Feel free to use the right **string permission**, that best suits for your purposes.
 
 ## Run the script from the terminal
 Here you are! Let's type:
