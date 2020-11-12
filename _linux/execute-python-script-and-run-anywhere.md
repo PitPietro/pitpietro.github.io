@@ -129,17 +129,16 @@ Close and open again a Terminal window to allow the changes to take effect, you 
 hello.py
 ```
 
-You can also run all the scripts placed in `my_scripts` from anywhere in your PC! (Off course you must change their permissions).<br>
+You can also run any script placed in `my_scripts` from anywhere in your PC! (Off course you must change its permissions).<br>
 
 **Please Note**: To call the script, just type `hello.py` without the starting `./` since you're no loger in its directory.
 
 ## Add the alias to "remove" the extension
-If you are tired of having to call `hello.py` with its extension (`.py`), you can use an *alias* to remove the extension!<br>
-Open again `.bashrc` file with `nano .bashrc`<br>
-Scroll down to the end of the file and type:
+If you are tired of having to call `hello.py` with its extension (`.py`), you can use an *alias* to remove it!<br>
+Open again `.bashrc` file with `nano .bashrc`, scroll down to the end of the file and type:
 ```bash
 alias hello='hello.py'
 ```
 
-Hit `Ctrl + X` to exit and `Y` to save its content.<br>
+Hit `Ctrl + X` to exit and `Y` to save its content.<br><br>
 Close and open again a Terminal window, now you can run `hello` script from anywhere in your PC!
