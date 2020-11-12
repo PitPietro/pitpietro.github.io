@@ -1,5 +1,5 @@
 ---
-title: "Execute a python script"
+title: "Execute a python script and run it from anywhere"
 excerpt: "Learning Python foundamentals"
 # header:
   # image: /assets/images/linux/default-img.png
@@ -14,7 +14,7 @@ toc_icon: "cog"
 ---
 
 ## Introduction
-There are many ways you can create, run or execute a Python script, here is the rightest way you can enable a Python script to execute.
+In this tutorial, you'll learn how to execute a Python script! Moreover, you'll learn how to run a script from anywhere in the Terminal, regardless of its type (Python, bash, ...). Which means you don't have to care about where the script is placed and what is your *current working directory*. 
 
 ## Create the script
 Assimung you want to place your script inside `my_scripts` Documents' subfolder (which does not exist jet), let's open a new Terminal window and type:
@@ -106,3 +106,40 @@ Allowing an interaction with the end-user, the output will always change! Moreov
 ```
 Hello World!
 ```
+
+**Please Note**: When you run the script from the Terminal, `./` tells the shell to look for your script (in ths case `hello.py`) in the current working directory.
+
+## Add the folder to PATH environmental variable
+To allow you to run the script from anywhere in the Terminal, you need to add `my_scripts` to `$PATH`  environmental variable.<br>
+As you can read [here](https://pitpietro.github.io/linux/envronmental-variables-and-status-commands/#path), `$PATH` lists all the folders that contain executable scripts.<br>
+Depending on the shell you have installed on your distro, you have to modify a different file to add `my_scripts`'s path to `$PATH`. I suggest you to read [create custom env var](https://pitpietro.github.io/linux/envronmental-variables-and-status-commands/#create-a-custom-env-var) slice of my previous tutorial to find out the file you have to modify.<br>
+Since I am using Ubuntu 20.04.1 LTS, I’ll refer to `.bashrc` file.
+```bash
+nano .bashrc
+```
+
+Scroll down to the end of the file and type:<br>
+```bash
+export PATH=$PATH:/home/$USER/Documents/my_scripts
+```
+
+Hit `Ctrl + X` to exit and `Y` to save its content.<br>
+Close and open again a Terminal window to allow the changes to take effect, you now can run:
+```bash
+hello.py
+```
+
+You can also run all the scripts placed in `my_scripts` from anywhere in your PC! (Off course you must change their permissions).<br>
+
+**Please Note**: To call the script, just type `hello.py` without the starting `./` since you're no loger in its directory.
+
+## Add the alias to "remove" the extension
+If you are tired of having to call `hello.py` with its extension (`.py`), you can use an *alias* to remove the extension!<br>
+Open again `.bashrc` file with `nano .bashrc`<br>
+Scroll down to the end of the file and type:
+```bash
+alias hello='hello.py'
+```
+
+Hit `Ctrl + X` to exit and `Y` to save its content.<br>
+Close and open again a Terminal window, now you can run `hello` script from anywhere in your PC!
