@@ -2,8 +2,6 @@
 main:
   - title: "Raspberry PI & Arduino"
     url: /raspberrypi-arduino/
-  - title: "Alexa"
-    url: /alexa/
   - title: "CGI"
     url: /cgi/
   - title: "Linux"
