@@ -50,12 +50,12 @@ say_hello()
 ```
 
 ## Add the execute permissions
-If you type the `ls -l` command, you'll see the **string permission** (together with some useful info) foreach file in the current directory. For `hello.py`, it should looks like:
+If you type the `ls -l` command, you'll see the **file permissions** (together with some useful info) foreach file in the current directory. For `hello.py`, it should looks like:
 ```bash
 -rw-rw-r--
 ```
 
-As you can read in my article about [changing permission to a file](https://pitpietro.github.io/linux/change-permission-to-files/), `-rw-rw-r--` means:
+As you can read in my article about [changing permission to a file](https://pitpietro.github.io/linux/change-permission-to-file/), `-rw-rw-r--` means:
 1. `hello.py` is a file (the starting `-` symbol)
 2. The current user has `read` and `write` permission: `rw-`
 3. The user's group has `read` and `write` permission: `rw-`
@@ -69,7 +69,7 @@ Let's add execute permission to the *user* and *user group*:
 chmod 774 hello.py
 ```
 
-Run again the `ls -l` command and analize the new **string permission** that should now look like: `-rwxrwxr--`
+Run again the `ls -l` command and analize the new **file permissions** that should now look like: `-rwxrwxr--`
 1. `hello.py` is a file (the starting `-` symbol)
 2. The current user has `read`, `write` and `execute` permission: `rwx`
 3. The user's group has `read`, `write` and `execute` permission: `rwx`
@@ -84,7 +84,7 @@ chmod +x hello.py
 chmod 775 hello.py
 ```
 
-Feel free to use the right **string permission**, that best suits for your purposes.
+Feel free to use the right **file permissions**, that best suits for your purposes.
 
 ## Run the script from the terminal
 Here you are! Let's type:
