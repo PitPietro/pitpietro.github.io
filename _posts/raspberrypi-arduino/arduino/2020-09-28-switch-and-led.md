@@ -1,9 +1,9 @@
 ---
-title: "Switch and LED control in Python with PyFirmata"
+title: "Switch and LED in Python with PyFirmata"
 date: 2020-09-28
 categories: Arduino
 tags: [arduino, python, linux]
-excerpt: "Programm an Arduino in a different way"
+excerpt: "Program an Arduino in a different way"
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
@@ -12,7 +12,7 @@ toc_icon: "cog"
 
 ## Introduction
 Have you ever wondered if it is possible to program an Arduino with a programming language other than C?<br>
-**Python** is the answer! In today's blog, you'll *blink* a LED using the *pyFirmata* library.
+**Python** is the answer! In today's blog, you'll *blink* a LED using the *pyFirmata* library and a switch.
 
 ## Hardware requirement
 1. Arduino board
@@ -23,14 +23,17 @@ Have you ever wondered if it is possible to program an Arduino with a programmin
 4. Breadboard & wires (of different colors)
 
 ## Hardware setup
-Connect a black wire to the side of the breadboard (the once near the blue/black line).<br>
-Connect the LED as described [here](https://pitpietro.github.io/arduinopy/switch-and-led/). The *Arduino Starter Kit*'s switch has four legs, which are parallel two by two. Connect it in the middle of the breadboard in order to have a positive/negative pair of legs for each side of the breadboard.<br>
-Connect one side to the `5V` pin of the Arduino Board and the other side to:
+Connect a black wire to the side of the breadboard (the one how has a blue or black line beside).<br>
+Connect the LED as described [here](https://pitpietro.github.io/arduino/blink-led-py/). The *Arduino Starter Kit*'s switch has four legs, which are parallel two by two. Connect it in the middle of the breadboard in order to have a positive/negative pair of legs for each side of the breadboard.<br>
+Connect one side to `5V` pin of the Arduino Board and the other side to both:
 1. ground (black line of the breadboard) using the 10k resistor
 2. PIN 10 on the Arduino board
 
 <br>
+
 **Please Note**: You can choose the pin you want, but you need to be sure to change the code accordingly.<br>
+
+![LED & switch setup](/assets/images/posts/arduino/arduino_switch_led.png)
 
 ## Software requirement
 1. Arduino IDE
@@ -52,6 +55,7 @@ Open your favourite Python IDE, configure a *virtual environment* and add the *p
 `pip install pyfirmata`
 
 ## Code
+Create a new Python file called `arduino_switch_led.py`
 ```python
 from pyfirmata import util, Arduino
 
@@ -78,9 +82,15 @@ if __name__ == '__main__':
 
 ```
 
-## Links
-[Arduino Homepage](https://www.arduino.cc/)<br>
-[Pyfirmata docs](https://pyfirmata.readthedocs.io/en/latest/)<br>
+<hr>
+To run the script, just type:
+```bash
+python arduino_switch_led.py
+```
 
 ## Conclusion
 In the next post, you'll learn how to read an *analog* value so let's keep learning!
+
+## Links
+[Arduino Homepage](https://www.arduino.cc/)<br>
+[Pyfirmata docs](https://pyfirmata.readthedocs.io/en/latest/)<br>
