@@ -5,6 +5,15 @@ permalink: /about/
 #     image: "/assets/images/landscape/jupiter_1.jpg"
 ---
 
+<!--
+IMGs dimensions
+header:
+    - image: /assets/images/.../default-img.png 1920x500px
+    - teaser: assets/images/.../default-img-th.png 600x400px
+
+(X; Y)px
+-->
+
 I started programming in C and Java at high schools, then in Kotlin for Android development. I learned PHP and MySQL to understand the client-server interaction. Moreover, I’m studying C#, Delphi and Python to enhance my programming flexibility.
 
 I’m very interested in online security, as technology has become increasingly invasive in our private lives!

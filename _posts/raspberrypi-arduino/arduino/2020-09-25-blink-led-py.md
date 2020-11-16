@@ -15,21 +15,21 @@ Have you ever wondered if it is possible to program an Arduino with a programmin
 **Python** is the answer! In today's blog, you'll *blink* a LED using the *pyFirmata* library.
 
 ## Hardware requirement
-1. Arduino board
+1. [Arduino Uno](https://store.arduino.cc/arduino-uno-rev3) board
 2. LED (of any color)
 3. 220 ohm resistor <span>&#177;</span>5% (red - red - brown - gold)
 4. Hook-up wires of different colors
 5. Breadboard
 
 ## Hardware setup
-Connect a black wire to the side of the breadboard (the once near the blue/black line).<br>
-Connect one side of the resistor where you put the wire before and the other side of the resistor in an arbitrarily decided center line.<br>
+Connect a black wire to the side of the breadboard (the one how has a blue or black line beside).<br>
+Connect one side of the resistor where you put the black wire and the other side of the resistor in an arbitrarily decided line (in the middle of the breadboard).<br>
 The LED has two legs:
-1. the longer leg is positive
-2. the shorter leg is negative
+1. Anode: the longer leg is positive
+2. Cathode: the shorter leg is negative
 
-Connect the negative leg to the resistor (using the breadboard).<br>
-Connet the positive leg to a wire that points to PIN 13.<br><br>
+Connect the cathode to the resistor (using the breadboard).<br>
+Connet the anode to a wire that points to PIN 13.<br><br>
 **Please Note**: You can choose the pin you want, but you need to be sure to change the code accordingly.<br>
 
 ## Software requirement
@@ -39,14 +39,16 @@ Connet the positive leg to a wire that points to PIN 13.<br><br>
    [click here](https://www.jetbrains.com/pycharm/)
 
 ## Software setup
-Arduino IDE offers a plenty of examples and firmare right inside it to facilitate development. For example, you can try to blink the LED on PIN 13:<br>
+Arduino IDE offers a plenty of examples and firmare right inside it to facilitate development. For example, you can try to blink the LED on PIN 13 with the default C-like code:<br>
 1. Press on `File`
 2. `Examples`
 3. `01.Basics`
 4. `Blink`
 
 Hit `Ctrl` + `U` to upload the code.<br>
-First of all, you need to load a C script inside the board to allow Python code to be executed.<br>
+Here we are: you should see the led blink!
+<hr>
+Since we want to use Python instead of C, you now need to upload on the board a firmware to allow the execution of Python code inside the Arduino.<br>
 So, in place of `Blink` example, let's load `StandardFirmata`:
 1. Press on `File`
 2. `Examples`
@@ -59,6 +61,7 @@ Open your favourite Python IDE, configure a *virtual environment* and add the *p
 `pip install pyfirmata`
 
 ## Code
+Create a new Python file called `arduino_blink.py`
 ```python
 from pyfirmata import util, Arduino
 import time
@@ -83,13 +86,18 @@ if __name__ == '__main__':
     blink(0.2)
 ```
 
-In the 1st and 2nd line are used to import the libraries needed to run the program. The *blink* function has a parameter called `b_time` that represents the time in milliseconds with which the led will blink.<br>
-The `board` variable stores an object defined in the *pyfirmata* library which uses the USB port to which the Arduino board is connected (similar to `'/dev/ttyACM0'` for Linux and `'COM1'` for Windows).
+In the 1st and 2nd line are used to import the libraries needed to run the program. The `blink` function has a parameter called `b_time` that represents the time in milliseconds with which the led will blink.<br>
+The `board` variable stores an object defined in the *pyfirmata* library which uses the USB port to which the Arduino board is connected (it will be something like`'/dev/ttyACM0'` for Linux or `'COM1'` for Windows).
+<hr>
+To run the script, just type:
+```bash
+python arduino_blink.py
+```
+
+## Conclusion
+I know blinking a LED is not so much exciting, but it's where all start! So keep learning to make increasingly difficult and interesting projects!
 
 ## Links
 [Arduino Homepage](https://www.arduino.cc/)<br>
 [Pyfirmata docs](https://pyfirmata.readthedocs.io/en/latest/)<br>
 [Resistor Color Code Calculator](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code)<br>
-
-## Conclusion
-I know blinking a LED is not so much exciting, but it's where all start! So keep learning to make increasingly difficult and interesting projects!
