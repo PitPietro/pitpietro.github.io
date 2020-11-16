@@ -32,6 +32,8 @@ Connect the cathode to the resistor (using the breadboard).<br>
 Connet the anode to a wire that points to PIN 13.<br><br>
 **Please Note**: You can choose the pin you want, but you need to be sure to change the code accordingly.<br>
 
+![blink setup](/assets/images/posts/arduino/arduino_blink.png)
+
 ## Software requirement
 1. Arduino IDE
    [click here](https://www.arduino.cc/en/Main/Software) to download the IDE
