@@ -12,8 +12,9 @@ toc_icon: "cog"
 
 ## Introduction
 It's very important to know how to read an *analog input* value from the Arduino board, so that this can then trigger the implementation of an output.<br>
-In this post, you'll use a potentiometer just to print its value on the console. In the next post you'll use the potentiometer to light-up a green led when the value is 1 and a red led when the value is 0.<br>
+In this post, you'll use a potentiometer just to print its value on the console.<br>
 Just for now, let's keep simple!
+<!-- In the next post you'll use the potentiometer to light-up a green led when the value is 1 and a red led when the value is 0. -->
 
 ## Hardware requirement
 1. Arduino board
@@ -45,6 +46,7 @@ Open your favourite Python IDE, configure a *virtual environment* and add the *p
 `pip install pyfirmata`
 
 ## Code
+Create a new Python file called `pot.py`
 ```python
 from pyfirmata import util, Arduino
 import time
@@ -66,6 +68,12 @@ def potentiometer():
 if __name__ == '__main__':
     potentiometer()
 
+```
+
+<hr>
+To run the script, just type:
+```bash
+python pot.py
 ```
 
 ## Links
