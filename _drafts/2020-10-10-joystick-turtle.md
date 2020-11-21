@@ -30,8 +30,8 @@ The JoyStick has five pins:
 4. VERT: The Y axes (analog input)
 5. VCC: Requires of 5V
 
-Moreover, you have to connect a LED to check if the pen is down or up.
-[JoyStick Setup](/assets/images/posts/arduino/joystick_1.png)
+Moreover, you have to connect a LED to check if the pen is down or up.<br>
+![JoyStick Setup](/assets/images/posts/arduino/joystick_1.png)
 
 ## Software requirement
 
@@ -41,6 +41,6 @@ Moreover, you have to connect a LED to check if the pen is down or up.
 
 ## Demonstration
 
-## Links
-
 ## Conclusion
+
+## Links

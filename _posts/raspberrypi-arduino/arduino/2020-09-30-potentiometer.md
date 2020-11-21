@@ -76,9 +76,9 @@ To run the script, just type:
 python pot.py
 ```
 
+## Conclusion
+The next step is to trigger an output depending on the value of the input: light-up a led, move a DC motor or whatever you want!
+
 ## Links
 [Arduino Homepage](https://www.arduino.cc/)<br>
 [Pyfirmata docs](https://pyfirmata.readthedocs.io/en/latest/)<br>
-
-## Conclusion
-The next step is to trigger an output depending on the value of the input: light-up a led, move a DC motor or whatever you want!
