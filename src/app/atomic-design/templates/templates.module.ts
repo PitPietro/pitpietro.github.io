@@ -5,6 +5,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import {AppMaterialModule} from "../../app-material.module";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
@@ -14,10 +16,12 @@ import {MatSidenavModule} from "@angular/material/sidenav";
   ],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     AppMaterialModule,
     OrganismsModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule
   ],
   exports: [
     HomepageComponent

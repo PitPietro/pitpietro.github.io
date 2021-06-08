@@ -17,6 +17,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatMenuModule} from "@angular/material/menu";
 
 
 @NgModule({
@@ -39,12 +42,15 @@ import {MatChipsModule} from '@angular/material/chips';
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatMenuModule,
+    MatButtonModule,
   ],
   exports: [
     MatTableModule,
     MatSnackBarModule,
-    MatButtonModule,
     MatIconModule,
     MatDialogModule,
     MatFormFieldModule,
@@ -58,7 +64,11 @@ import {MatChipsModule} from '@angular/material/chips';
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatMenuModule,
   ]
 })
-export class AppMaterialModule { }
+export class AppMaterialModule {
+}

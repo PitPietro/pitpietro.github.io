@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MenuItemInterface} from "../../../shared/models";
 
-export interface MenuItem {
-  label: string;
-  icon: string;
-}
 
 @Component({
   selector: 'app-homepage',
@@ -11,7 +8,7 @@ export interface MenuItem {
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-  menuItems: MenuItem[] = [
+  menuItems: MenuItemInterface[] = [
     {
       label: 'Sign Up',
       icon: 'login'
