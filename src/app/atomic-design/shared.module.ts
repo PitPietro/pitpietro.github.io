@@ -6,6 +6,7 @@ import {PagesModule} from "./pages/pages.module";
 import {AtomsModule} from "./atoms/atoms.module";
 import {MoleculesModule} from "./molecules/molecules.module";
 import {OrganismsModule} from "./organisms/organisms.module";
+import {AppMaterialModule} from "../app-material.module";
 
 const sharedModules = [
   AtomsModule,
@@ -20,6 +21,7 @@ const sharedModules = [
   declarations: [],
   imports: [
     CommonModule,
+    AppMaterialModule,
     sharedModules
   ],
   exports: [sharedModules],
