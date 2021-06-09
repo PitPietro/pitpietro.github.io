@@ -10,28 +10,20 @@ import {MenuItemInterface} from "../../../shared/models";
 export class HomepageComponent implements OnInit {
   menuItems: MenuItemInterface[] = [
     {
-      label: 'Sign Up',
+      label: 'Dev',
       icon: 'login'
     },
     {
-      label: 'About',
+      label: 'OS',
       icon: 'help'
     },
     {
-      label: 'Pricing',
+      label: 'Repos',
       icon: 'attach_money'
     },
     {
-      label: 'Docs',
+      label: 'About Me',
       icon: 'notes'
-    },
-    {
-      label: 'Showcase',
-      icon: 'slideshow'
-    },
-    {
-      label: 'Blog',
-      icon: 'rss_feed'
     },
   ];
 
