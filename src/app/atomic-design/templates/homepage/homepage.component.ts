@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItemInterface} from "../../../shared/models";
+import {ScullyRoute, ScullyRoutesService} from "@scullyio/ng-lib";
+import {Observable} from "rxjs";
 
 
 @Component({
@@ -8,6 +10,8 @@ import {MenuItemInterface} from "../../../shared/models";
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
+  links$: Observable<ScullyRoute[]> = this.scully.available$;
+
   menuItems: MenuItemInterface[] = [
     {
       label: 'Dev',
@@ -27,8 +31,11 @@ export class HomepageComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private scully: ScullyRoutesService) { }
 
   ngOnInit(): void {
+    this.links$.subscribe((links) => {
+      console.log('|Homepage| ngOnInit() ~ links: ', links);
+    });
   }
 }
