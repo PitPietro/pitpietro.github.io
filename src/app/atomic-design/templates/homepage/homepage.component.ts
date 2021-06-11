@@ -10,7 +10,7 @@ import {Observable} from "rxjs";
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-  links$: Observable<ScullyRoute[]> = this.scully.available$;
+  // links$: Observable<ScullyRoute[]> = this.scully.available$;
 
   menuItems: MenuItemInterface[] = [
     {
@@ -34,8 +34,8 @@ export class HomepageComponent implements OnInit {
   constructor(private scully: ScullyRoutesService) { }
 
   ngOnInit(): void {
-    this.links$.subscribe((links) => {
-      console.log('|Homepage| ngOnInit() ~ links: ', links);
-    });
+    // this.links$.subscribe((links) => {
+    //   console.log('|Homepage| ngOnInit() ~ links: ', links);
+    // });
   }
 }

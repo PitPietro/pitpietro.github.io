@@ -3,6 +3,7 @@ title: "Change permission to a file"
 excerpt: "Enhance productivity in Linux"
 date: 2020-07-21
 tags: [terminal, linux]
+published: true
 ---
 
 ## Introduction
