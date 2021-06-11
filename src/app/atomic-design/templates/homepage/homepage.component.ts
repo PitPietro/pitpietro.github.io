@@ -11,19 +11,19 @@ export class HomepageComponent implements OnInit {
   menuItems: MenuItemInterface[] = [
     {
       label: 'Dev',
-      icon: 'login'
+      icon: 'code'
     },
     {
       label: 'OS',
-      icon: 'help'
+      icon: 'laptop'
     },
     {
       label: 'Repos',
-      icon: 'attach_money'
+      icon: 'folder'
     },
     {
       label: 'About Me',
-      icon: 'notes'
+      icon: 'lightbulb'
     },
   ];
 
