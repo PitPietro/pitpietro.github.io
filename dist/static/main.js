@@ -237,6 +237,14 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
+        path: '',
+        loadChildren: () => __webpack_require__.e(/*! import() | atomic-design-pages-home-home-module */ "atomic-design-pages-home-home-module").then(__webpack_require__.bind(null, /*! ./atomic-design/pages/home/home.module */ "./src/app/atomic-design/pages/home/home.module.ts")).then(m => m.HomeModule)
+    },
+    {
+        path: 'home',
+        loadChildren: () => __webpack_require__.e(/*! import() | atomic-design-pages-home-home-module */ "atomic-design-pages-home-home-module").then(__webpack_require__.bind(null, /*! ./atomic-design/pages/home/home.module */ "./src/app/atomic-design/pages/home/home.module.ts")).then(m => m.HomeModule)
+    },
+    {
         path: 'os',
         loadChildren: () => __webpack_require__.e(/*! import() | os-os-module */ "os-os-module").then(__webpack_require__.bind(null, /*! ./os/os.module */ "./src/app/os/os.module.ts")).then(m => m.OsModule)
     }
@@ -314,6 +322,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @scullyio/ng-lib */ "./node_modules/@scullyio/ng-lib/__ivy_ngcc__/fesm2015/scullyio-ng-lib.js");
 /* harmony import */ var _atomic_design_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./atomic-design/shared.module */ "./src/app/atomic-design/shared.module.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
+/* harmony import */ var _app_material_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-material.module */ "./src/app/app-material.module.ts");
+
 
 
 
@@ -331,13 +341,15 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
             _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
             _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_4__["ScullyLibModule"],
             _atomic_design_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"]
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+            _app_material_module__WEBPACK_IMPORTED_MODULE_7__["AppMaterialModule"]
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
         _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_4__["ScullyLibModule"],
         _atomic_design_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"],
-        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"]] }); })();
+        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+        _app_material_module__WEBPACK_IMPORTED_MODULE_7__["AppMaterialModule"]] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -349,7 +361,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
                     _scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_4__["ScullyLibModule"],
                     _atomic_design_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"],
-                    _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"]
+                    _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+                    _app_material_module__WEBPACK_IMPORTED_MODULE_7__["AppMaterialModule"]
                 ],
                 providers: [],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]

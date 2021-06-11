@@ -6,11 +6,11 @@ import {OsPostComponent} from "./os-post/os-post.component";
 
 const routes: Routes = [
   {
-    path: ':id',
+    path: ":id",
     component: OsPostComponent,
   },
   {
-    path: '',
+    path: "",
     component: OsComponent,
   }
 ];

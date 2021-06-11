@@ -58,11 +58,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
-        path: ':id',
+        path: ":id",
         component: _os_post_os_post_component__WEBPACK_IMPORTED_MODULE_3__["OsPostComponent"],
     },
     {
-        path: '',
+        path: "",
         component: _os_component__WEBPACK_IMPORTED_MODULE_2__["OsComponent"],
     }
 ];

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import {SharedModule} from "./atomic-design/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppMaterialModule} from "./app-material.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ScullyLibModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

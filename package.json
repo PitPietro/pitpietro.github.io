@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "npx scully --",
-    "scully:serve": "npx scully serve --"
+    "scully:serve": "npx scully serve --",
+    "scully-run-serve": "ng build --prod && npm run scully -- --watch --scanRoutes && npm run scully:serve"
   },
   "private": true,
   "dependencies": {

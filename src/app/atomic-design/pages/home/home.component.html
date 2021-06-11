@@ -1,0 +1,14 @@
+<!--extract data from the available links$ Scully has rendered, loop through them-->
+
+<h1>Homepage</h1>
+<ul>
+  <li *ngFor="let page of links$ | async">
+    <a [routerLink]="page.route">
+      {{ page.route }}
+    </a>
+  </li>
+</ul>
+
+<p>
+  Scully injects the markdown's HTML at build time.
+</p>
