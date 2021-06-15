@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "scully": "npx scully --",
     "scully:serve": "npx scully serve --",
-    "scully-run-serve": "ng build --prod && npm run scully -- --watch --scanRoutes && npm run scully:serve"
+    "scully-run-serve": "rm -rf /dist && rm -rf src/assets/scully-routes.json ng build --prod && npm run scully --watch --scanRoutes && npm run scully:serve"
   },
   "private": true,
   "dependencies": {

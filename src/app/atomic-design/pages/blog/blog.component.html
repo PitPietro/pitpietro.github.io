@@ -1,0 +1,9 @@
+<h1>Blog posts</h1>
+
+<ol>
+  <li *ngFor="let blog of blogPost | async">
+    <a [routerLink]="blog.route">
+      {{blog.title}} by {{blog.authorName}}
+    </a>
+  </li>
+</ol>
